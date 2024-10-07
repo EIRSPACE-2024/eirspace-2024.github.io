@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------------------- */
+/*          FOR THE SECTIONS WHICH ARE A BACKGROUND AND A COMMENTARY         */
+/* ------------------------------------------------------------------------- */
+
+.section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              INDEX.HTML                                   */
+/* ------------------------------------------------------------------------- */
+
+#section1 {
+    background-image: url('../../static/team.jpg');
+}
+
+#section2 {
+    background-image: url('../../static/rocket.png');
+}
+
+#section3 {
+    background-image: url('../../static/drone.jpg');
+}
+
+/* ------------------------------------------------------------------------- */
+
