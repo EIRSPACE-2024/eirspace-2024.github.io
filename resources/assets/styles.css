@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------------------- */
+/*          MAIN CSS FILE - FONT, SIZE, BODY, PARTICULAR STYLE ETC..         */
+/* ------------------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Style des titres et du texte */
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+p {
+
+/* ------------------------------------------------------------------------- */
+

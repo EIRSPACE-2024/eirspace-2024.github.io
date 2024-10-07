@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------------------- */
+/*          CSS STYLE FOR THE HEADER - NAVBAR, ICON, TITLE ETC..             */
+/* ------------------------------------------------------------------------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.navbar-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f39c12; /* Couleur de survol */
+}
+
+/* ------------------------------------------------------------------------- */
+
