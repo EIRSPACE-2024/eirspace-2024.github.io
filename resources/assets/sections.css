@@ -15,7 +15,6 @@
 
 .content {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0);
     padding: 20px;
 }
 
@@ -28,16 +27,28 @@
 /*                              INDEX.HTML                                   */
 /* ------------------------------------------------------------------------- */
 
+/* logo section. */
+#section0 {
+}
+
+/* team section. */
 #section1 {
     background-image: url('../../static/team.jpg');
 }
 
+/* rocket section. */
 #section2 {
     background-image: url('../../static/rocket.png');
 }
 
+/* drone section. */
 #section3 {
     background-image: url('../../static/drone.jpg');
+}
+
+/* astronomy section. */
+#section4 {
+    background-image: url('../../static/astronomy.jpg');
 }
 
 /* ------------------------------------------------------------------------- */
