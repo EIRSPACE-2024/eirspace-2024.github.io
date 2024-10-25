@@ -1,16 +1,5 @@
 /* ------------------------------------------------------------------------- */
-/*                              TO RETRIEVE A TEXT                           */
-/* ------------------------------------------------------------------------- */
-
-const text = "Bienvenue sur Eirspace, explorez les mystères de l'univers.";
-
-
-/* ------------------------------------------------------------------------- */
 /*                              TO TYPE A TEXT                               */
-/* ------------------------------------------------------------------------- */
-
-const typingSpeed = text.length / 2; 
-
 /* ------------------------------------------------------------------------- */
 
 function typeEffect(element, cursorElement, text, speed) {
@@ -18,9 +7,18 @@ function typeEffect(element, cursorElement, text, speed) {
 
     function type() {
         if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            cursorElement.style.display = 'inline';
+            if (text.charAt(i) == '<') {
+                // EOL.
+                element.innerHTML += '<BR>';
+                i += 4;
+
+                cursorElement.innerHTML = "<BR>";
+            } else {
+                element.innerHTML += text.charAt(i);
+                i++;
+                cursorElement.style.display = 'inline';
+            }
+
             setTimeout(() => {
                 cursorElement.style.display = 'none';
                 setTimeout(type, speed);
@@ -37,10 +35,19 @@ function typeEffect(element, cursorElement, text, speed) {
 /*                              ON THE WEB PAGE                              */
 /* ------------------------------------------------------------------------- */
 
-document.addEventListener("DOMContentLoaded", () => {
-    const targetElement = document.getElementById("typing-text");
-    const cursorElement = document.getElementById("cursor");
+
+function typeWebPage(typingTextId, cursorId, typingSpeed) {
+    const targetElement = document.getElementById(typingTextId);
+    const cursorElement = document.getElementById(cursorId);
+    const text = targetElement.getAttribute("data-text")
+
     typeEffect(targetElement, cursorElement, text, typingSpeed);
+}
+
+/* ------------------------------------------------------------------------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+    typeWebPage("typing-text_index_section_1", "cursor_index_section_1", 30);
 });
 
 /* ------------------------------------------------------------------------- */
