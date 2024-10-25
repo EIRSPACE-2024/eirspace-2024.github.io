@@ -8,13 +8,12 @@
     box-sizing: border-box;
     text-decoration: none;
     scrollbar-width: none; /* Hide scrollbar. */
-    background-image: url('../../static/background_star.svg');
 }
 
 body {
     font-family: Arial, sans-serif;
     color: white;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: black;
 }
 
 a {
@@ -25,6 +24,33 @@ h1 {
     font-size: 3em;
     margin-bottom: 10px;
     background: none;
+}
+
+li {
+    border: none;
+    background: none;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                  STARS                                    */
+/* ------------------------------------------------------------------------- */
+
+.star-field {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkling 1.5s infinite alternate;
+}
+
+@keyframes twinkling {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
 
 /* ------------------------------------------------------------------------- */
