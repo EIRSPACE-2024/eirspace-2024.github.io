@@ -13,6 +13,8 @@
 }
 
 .content {
+    border: none;
+    background: none;
     padding: 20px;
     z-index: 1;
 }
