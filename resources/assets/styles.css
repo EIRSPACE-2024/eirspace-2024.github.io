@@ -18,6 +18,7 @@ body {
 
 a {
     text-decoration: none;
+    background: none;
 }
 
 h1 {
@@ -45,13 +46,21 @@ li {
     position: absolute;
     border-radius: 50%;
     background: white;
-    animation: twinkling 1.5s infinite alternate;
+    opacity: 0;
+}
+
+.twinkling {
+    animation: twinkling 4s infinite alternate, fade-in 2s ease-in;
 }
 
 @keyframes twinkling {
-    0% { opacity: 0.5; }
+    0% { opacity: 0.1; }
     100% { opacity: 1; }
 }
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 
 /* ------------------------------------------------------------------------- */
 
