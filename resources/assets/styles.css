@@ -8,6 +8,7 @@
     box-sizing: border-box;
     text-decoration: none;
     scrollbar-width: none; /* Hide scrollbar. */
+    background-image: url('../../static/background_star.svg');
 }
 
 body {
@@ -23,6 +24,7 @@ a {
 h1 {
     font-size: 3em;
     margin-bottom: 10px;
+    background: none;
 }
 
 /* ------------------------------------------------------------------------- */
