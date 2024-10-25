@@ -14,32 +14,18 @@
     align-items: start;
 }
 
+/* ------------------------------------------------------------------------- */
+/*                              FOOTER LINKS                                 */
+/* ------------------------------------------------------------------------- */
+
 .footer-links {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 10px;
     text-align: left;
 }
 
-.social-links {
-    list-style: none;
-    padding: 20px;
-    margin: 0;
-    text-align: right;
-    font-size: 20px;
-}
-
-.social-links img {
-    width: 30px; 
-    height: 30px;
-    margin-right: 8px; 
-}
-
 .footer-links li {
-    margin: 10px 0;
-}
-
-.social-links li {
     margin: 10px 0;
 }
 
@@ -50,6 +36,26 @@
     transition: color 0.3s;
 }
 
+.footer-links a:hover {
+    color: blue;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SOCIAL LINKS                                 */
+/* ------------------------------------------------------------------------- */
+
+.social-links {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    text-align: right;
+    font-size: 20px;
+}
+
+.social-links li {
+    margin: 10px 0;
+}
+
 .social-links a {
     color: white;
     text-decoration: none;
@@ -57,10 +63,19 @@
     transition: color 0.3s;
 }
 
-.footer-links a:hover,
 .social-links a:hover {
     color: blue;
 }
+
+.social-links img {
+    width: 30px; 
+    height: 30px;
+    margin-right: 8px; 
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              EIRSPACE LOGO                                */
+/* ------------------------------------------------------------------------- */
 
 .footer-logo-center {
     display: flex;
@@ -72,6 +87,10 @@
     max-width: 240px;
     width: 100%;
 }
+
+/* ------------------------------------------------------------------------- */
+/*                                  COPYRIGHT                                */
+/* ------------------------------------------------------------------------- */
 
 .footer-copyright {
     border-top: 1px solid #333;
