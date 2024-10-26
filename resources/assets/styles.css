@@ -23,7 +23,7 @@ a {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 10px;
     background: none;
 }
@@ -63,6 +63,44 @@ li {
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SHOOTING STAR                                */
+/* ------------------------------------------------------------------------- */
+
+.shooting-star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    opacity: 1;
+    animation: shooting-star 1s linear forwards;
+}
+
+@keyframes shooting-star {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(50vw, 50vh) scale(2);
+        opacity: 0;
+    }
+}
 
 /* ------------------------------------------------------------------------- */
 

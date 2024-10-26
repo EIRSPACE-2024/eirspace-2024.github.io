@@ -40,7 +40,8 @@ function createStar() {
 /* ------------------------------------------------------------------------- */
 
 function adjustStars() {
-    const numStarsNeeded = Math.floor(window.screen.width * window.screen.height * starDensity);
+    const numStarsNeeded = 
+        Math.floor(window.screen.width * window.screen.height * starDensity);
     const currentStars = document.querySelectorAll('.star').length;
 
     if (currentStars < numStarsNeeded) {
