@@ -3,41 +3,81 @@
 /* ------------------------------------------------------------------------- */
 
 .navbar {
+    font-family: 'Orbitron', sans-serif;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0);
+    height: 12vh;
+    background-color: black;
+    color: white;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    align-items: left;
+    transition: transform 1s ease;
     z-index: 100;
-    padding: 15px 0;
 }
 
-.navbar-container {
-    width: 90%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* ------------------------------------------------------------------------- */
+/*                          LOGO aka EIRSPACEEEE                             */
+/* ------------------------------------------------------------------------- */
+
+.logo-navbar {
+    font-size: 28px;
+    letter-spacing: 3px;
+    padding: 15px 0;
+    margin-right: 30px;
+    margin-left: 12vw;
+    margin-top: 2vh;
 }
+
+.logo-navbar a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                          NAVLINKS AND OTHER STUFF                         */
+/* ------------------------------------------------------------------------- */
 
 .nav-links {
+    font-size: 20px;
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 2vh;
+
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin: 0 20px;
+    padding: 20px 0;
 }
 
 .nav-links a {
-    color: black;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-.nav-links a:hover {
-    color: #f39c12;
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.1s ease;
+}
+
+.nav-links a:hover::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 /* ------------------------------------------------------------------------- */
