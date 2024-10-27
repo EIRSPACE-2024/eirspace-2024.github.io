@@ -12,8 +12,6 @@
     background-color: black;
     color: white;
     display: flex;
-    justify-content: left;
-    align-items: left;
     transition: transform 1s ease;
     z-index: 100;
 }
@@ -81,6 +79,102 @@
 
 .nav-links a:hover::after {
     transform: translateX(-50%) scaleX(1);
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              DROPDOWN MENU                                */
+/* ------------------------------------------------------------------------- */
+
+.dropdown-menu {
+    margin-left: auto;
+    margin-right: 5vw;
+}
+
+.menu-toggle {
+    font-size: 3em;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5vh;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                          DROP DOWN MENU ANIMATION                         */
+/* ------------------------------------------------------------------------- */
+
+.dropdown-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 2em;
+    list-style: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(-10vw);
+}
+
+.dropdown-links li a {
+    color: white;
+    font-size: 1.5em;
+    padding: 0.8em 0;
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s ease;
+    animation: dropdownItem 0.8s ease forwards;
+}
+
+.dropdown-links li a:hover {
+    color: #00FF41;
+}
+
+@keyframes dropdownItem {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-links.closing li {
+    animation: dropdownItemClose 0.5s ease forwards;
+}
+
+@keyframes dropdownItemClose {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SMALL SCREENS                               */
+/* ------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .dropdown-menu {
+        display: block;
+    }
 }
 
 /* ------------------------------------------------------------------------- */

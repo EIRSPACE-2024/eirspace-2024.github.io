@@ -21,4 +21,23 @@ window.addEventListener('scroll', () => {
 });
 
 /* ------------------------------------------------------------------------- */
+/*                      DROP DOWN MENU ANIMATION                             */
+/* ------------------------------------------------------------------------- */
+
+function toggleMenu() {
+    const dropdownLinks = document.querySelector('.dropdown-links');
+    
+    if (dropdownLinks.classList.contains('active')) {
+        // Closing it smoothly.
+        dropdownLinks.classList.add('closing');
+        
+        setTimeout(() => {
+            dropdownLinks.classList.remove('active', 'closing');
+        }, 500);
+    } else {
+        dropdownLinks.classList.add('active');
+    }
+}
+
+/* ------------------------------------------------------------------------- */
 
