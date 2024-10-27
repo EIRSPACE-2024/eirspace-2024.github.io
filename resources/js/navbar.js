@@ -3,8 +3,23 @@
 /* ------------------------------------------------------------------------- */
 
 let lastScrollTop = 0;
+let lastClick = 0;
 const navbar = document.getElementById('navbar');
 const dropdownLinks = document.querySelector('.dropdown-links');
+
+/* ------------------------------------------------------------------------- */
+
+window.addEventListener('click', () => {
+    if (lastClick == 0) {
+        lastClick += 1;
+        return;
+    }
+
+    if (dropdownLinks.classList.contains('active')) {
+        lastClick = 0;
+        closeMenu();
+    }
+});
 
 /* ------------------------------------------------------------------------- */
 
@@ -49,7 +64,7 @@ function closeMenu() {
     
     setTimeout(() => {
         dropdownLinks.classList.remove('active', 'closing');
-    }, 500);
+    }, 200);
 }
 
 /* ------------------------------------------------------------------------- */
