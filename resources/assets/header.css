@@ -149,6 +149,10 @@
     }
 }
 
+.dropdown-links.closing  {
+    background: none;
+}
+
 .dropdown-links.closing li {
     animation: dropdownItemClose 0.5s ease forwards;
 }
