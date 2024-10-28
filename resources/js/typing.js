@@ -40,7 +40,7 @@ function typeWebPage(typingTextId, typingSpeed) {
 /* ------------------------------------------------------------------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
-    typeWebPage("typing-text_index_section_0", 40);
+    typeWebPage("typing-text_0", 40);
 });
 
 /* ------------------------------------------------------------------------- */

@@ -64,6 +64,26 @@
 }
 
 /* ------------------------------------------------------------------------- */
+/*                              COMING SOON SECTION                          */
+/* ------------------------------------------------------------------------- */
+
+.section-zero-coming-soon {
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+}
+
+.section-content-coming-soon {
+    text-align: center;
+    border: none;
+    background: none;
+    z-index: 4;
+}
+
+.section-content-coming-soon h1 {
+    font-size: 4em;
+}
+
+/* ------------------------------------------------------------------------- */
 /*                              SMALL SCREENS                                */
 /* ------------------------------------------------------------------------- */
 
