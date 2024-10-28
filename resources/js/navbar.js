@@ -26,6 +26,7 @@ window.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     // Close the possible drop down menu.
     if (dropdownLinks.classList.contains('active')) {
+        lastClick = 0;
         closeMenu();
     }
 
