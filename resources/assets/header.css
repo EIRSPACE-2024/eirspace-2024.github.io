@@ -75,7 +75,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%) scaleX(0);
-    transition: transform 0.1s ease;
+    transition: transform 0.3s ease;
 }
 
 .nav-links a:hover::after {

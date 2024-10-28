@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
                 loadingScreen.style.display = 'none';
                 sessionStorage.setItem('hasVisited', 'true');
             }, 500); 
-        }, 2000); // Max time duration.
+        }, 2500); // Max time duration.
     } else {
         loadingScreen.style.display = 'none';
     }
