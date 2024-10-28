@@ -45,12 +45,14 @@ li {
 /* ------------------------------------------------------------------------- */
 
 .star-field {
+    z-index: -1;
     position: relative;
     width: 100%;
     height: 100%;
 }
 
 .star {
+    z-index: -1;
     position: absolute;
     border-radius: 50%;
     background: white;
@@ -76,6 +78,7 @@ li {
 /* ------------------------------------------------------------------------- */
 
 .shooting-star-field {
+    z-index: -1;
     position: fixed;
     top: 0;
     left: 0;
@@ -87,6 +90,7 @@ li {
 }
 
 .shooting-star {
+    z-index: -1;
     position: absolute;
     width: 2px;
     height: 2px;

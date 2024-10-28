@@ -9,7 +9,7 @@ const starDensity = 1 / 15000;
 /*                          SIZE OF THE WINDOW                               */
 /* ------------------------------------------------------------------------- */
 
-const pageWidth = window.screen.width;
+const pageWidth = window.innerWidth; // window.screen.width // if not good.
 const pageHeight = document.body.scrollHeight;
 
 /* ------------------------------------------------------------------------- */
