@@ -21,7 +21,7 @@
 
 .section-badge {
     margin-top: 0vh;
-    margin-left: 5vw;
+    margin-left: 4vw;
     display: inline-block;
     background: none;
     position: relative;
@@ -52,7 +52,7 @@
 }
 
 .section-content {
-    left: 15vw;
+    left: 16vw;
     position: absolute;
     border: none;
     background: none;
@@ -95,6 +95,10 @@
 }
 
 @media (max-width: 768px) {
+    .section-content {
+        left: 12vw;
+    }
+
     .section-badge {
         font-size: 2em;
     }
