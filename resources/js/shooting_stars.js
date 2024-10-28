@@ -1,3 +1,8 @@
+/* ------------------------------------------------------------------------- */
+/*                              SHOOTING STAR                                */
+/* ------------------------------------------------------------------------- */
+
+
 function createShootingStar() {
     const starContainer = document.querySelector('.shooting-star-field');
 
@@ -18,4 +23,6 @@ function createShootingStar() {
 }
 
 setInterval(createShootingStar, 6000);
+
+/* ------------------------------------------------------------------------- */
 
