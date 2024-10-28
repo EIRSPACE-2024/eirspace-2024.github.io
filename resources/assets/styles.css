@@ -8,7 +8,6 @@
     box-sizing: border-box;
     text-decoration: none;
     scrollbar-width: none; /* Hide scrollbar. */
-    z-index: 1;
 }
 
 body {
@@ -36,6 +35,7 @@ li {
 }
 
 .image-container {
+    z-index: 1;
     max-width: 1000px;
     max-height: 1000px;
 }
@@ -78,7 +78,6 @@ li {
 /* ------------------------------------------------------------------------- */
 
 .shooting-star-field {
-    z-index: -1;
     position: fixed;
     top: 0;
     left: 0;
@@ -86,11 +85,9 @@ li {
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
-    z-index: 10;
 }
 
 .shooting-star {
-    z-index: -1;
     position: absolute;
     width: 2px;
     height: 2px;
@@ -103,10 +100,12 @@ li {
 
 @keyframes shooting-star {
     0% {
+        z-index: -1;
         transform: translate(0, 0) scale(1);
         opacity: 1;
     }
     100% {
+        z-index: -1;
         transform: translate(50vw, 50vh) scale(2);
         opacity: 0;
     }
