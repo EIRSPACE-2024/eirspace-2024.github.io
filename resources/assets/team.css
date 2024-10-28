@@ -1,0 +1,79 @@
+/* ------------------------------------------------------------------------- */
+/*                              FOR THE TEAM PAGE                            */
+/* ------------------------------------------------------------------------- */
+
+.team-section {
+    margin-top: 30vh;
+    padding: 2rem;
+    text-align: center;
+    background: none;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.team-member {
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.member-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 3em;
+    transition: color 0.3s;
+}
+
+.member-info h3:hover {
+    color: #00FF41;
+}
+
+.member-info h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 2.5em;
+    transition: color 0.3s;
+}
+
+.member-info h2:hover {
+    color: #00FF41;
+}
+
+.member-info p {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 1.5em;
+}
+
+.member-info p:hover {
+    color: #00FF41;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SMALL SCREENS                                */
+/* ------------------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+
