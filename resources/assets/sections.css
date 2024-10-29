@@ -133,6 +133,24 @@
     .section-badge-team {
         font-size: 2em;
     }
+}
+
+@media (max-width: 500px) {
+    .section-zero-coming-soon {
+        margin-top: 10vh;
+    }
+
+    .section-content {
+        left: 10vw;
+    }
+
+    .section-badge {
+        font-size: 1.5em;
+    }
+
+    .section-badge-team {
+        font-size: 2em;
+    }
 
 }
 
