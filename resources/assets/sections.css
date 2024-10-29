@@ -44,6 +44,32 @@
 }
 
 /* ------------------------------------------------------------------------- */
+/*                          FOR THE FORMER TEAMS                             */
+/* ------------------------------------------------------------------------- */
+
+.section-badge-team {
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    background: none;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 3em;
+    transition: color 0.3s;
+}
+
+.section-badge-team a {
+    color: inherit;
+    text-decoration: none;
+    background: none;
+}
+
+.section-badge-team:hover {
+    color: #00FF41;
+}
+
+/* ------------------------------------------------------------------------- */
 /*              SPECIAL FIRST SECTION, because of flex glitch                */
 /* ------------------------------------------------------------------------- */
 
@@ -100,7 +126,7 @@
     }
 
     .section-badge {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 }
 
