@@ -75,27 +75,27 @@
 /*                              SPECIAL FOR JUJU                             */
 /* ------------------------------------------------------------------------- */
 
+.team-member-juju {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 5s ease 0S;
+}
+
+.team-member-juju:hover {
+    opacity: 1;
+}
+
 .team-member-juju img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 1);
-    opacity: 0;
-    transition: all 5s ease 0s;
-}
-
-.team-member-juju img:hover {
-    opacity: 1;
 }
 
 .member-info-juju {
     background: none;
-    opacity: 0;
-    transition: all 5s ease 0s;
-}
-
-.member-info-juju:hover {
-    opacity: 1;
 }
 
 .member-info-juju h3 {
