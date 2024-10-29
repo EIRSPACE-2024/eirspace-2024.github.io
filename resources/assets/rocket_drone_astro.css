@@ -43,6 +43,25 @@
     color: #00FF41;
 }
 
+/* ------------------------------------------------------------------------- */
+/*                          For the first section.                           */
+/* ------------------------------------------------------------------------- */
+
+.minipage-section-zero {
+    margin-top: 20vh;
+    padding: 2rem;
+    background: none;
+}
+
+.minipage-grid-zero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
 .minipage-content-zero {
     text-align: center;
     background: none;
@@ -54,9 +73,33 @@
 /*                              SMALL SCREENS                                */
 /* ------------------------------------------------------------------------- */
 
-@media (max-width: 1250px) {
+@media (max-width: 1400px) {
+    .minipage-section {
+        margin-top: 10vh;
+    }
+
     .minipage-grid {
-        grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+        grid: none;
+    }
+
+    .minipage-member img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .minipage-content {
+        font-size: 1.3em;
+    }
+
+    .minipage-member img {
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .minipage-content {
+        font-size: 1.2em;
     }
 
     .minipage-content-zero {
@@ -64,7 +107,6 @@
         letter-spacing: 0em;
     }
 }
-
 
 /* ------------------------------------------------------------------------- */
 
