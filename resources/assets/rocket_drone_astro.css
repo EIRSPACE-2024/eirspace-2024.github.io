@@ -23,8 +23,7 @@
 
 .minipage-member img {
     z-index: 2;
-    width: 60%;
-    min-width: 400px;
+    width: 50%;
     height: auto;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 1);
@@ -117,6 +116,10 @@
     .minipage-content-zero {
         font-size: 0.5em;
         letter-spacing: 0em;
+    }
+
+    .minipage-member img {
+        width: 40%;
     }
 }
 

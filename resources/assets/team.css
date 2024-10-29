@@ -140,5 +140,19 @@
     }
 }
 
+@media (max-width: 500px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+    .team-member img {
+        max-width: 400px;
+    }
+
+    .team-member-juju img {
+        max-width: 400px;
+    }
+}
+
 /* ------------------------------------------------------------------------- */
 
