@@ -136,10 +136,6 @@
 }
 
 @media (max-width: 500px) {
-    .section-zero {
-        margin-top: -20vh;
-    }
-
     .section-content {
         left: 7vw;
     }
