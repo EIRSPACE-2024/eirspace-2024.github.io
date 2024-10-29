@@ -120,6 +120,7 @@
 
     .minipage-member img {
         width: 40%;
+        max-width: 150px;
     }
 }
 
