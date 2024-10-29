@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------------------- */
+/*          Here is the css for the rocket, drone and astro section          */
+/* ------------------------------------------------------------------------- */
+
+.minipage-section {
+    margin-top: 20vh;
+    padding: 2rem;
+    text-align: center;
+    background: none;
+}
+
+.minipage-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.minipage-member {
+    background: none;
+}
+
+.minipage-member img {
+    width: 50%;
+    min-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+.minipage-content {
+
+}
+
+.minipage-content-zero {
+    text-align: center;
+    background: none;
+    font-size: 1.5em;
+
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SMALL SCREENS                                */
+/* ------------------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+    .minipage-grid {
+        grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    }
+
+    .minipage-content-zero {
+        font-size: 1em;
+    }
+}
+
+
+/* ------------------------------------------------------------------------- */
+
