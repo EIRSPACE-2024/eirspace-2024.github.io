@@ -137,15 +137,19 @@
 
 @media (max-width: 500px) {
     .section-zero {
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
 
     .section-zero-coming-soon {
-        margin-top: 10vh;
+        margin-top: 20vh;
     }
 
     .section-content {
-        left: 10vw;
+        left: 7vw;
+    }
+
+    .section-content-coming-soon {
+        font-size: 2em;
     }
 
     .section-badge {
@@ -155,7 +159,6 @@
     .section-badge-team {
         font-size: 1em;
     }
-
 }
 
 /* ------------------------------------------------------------------------- */
