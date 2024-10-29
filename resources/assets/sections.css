@@ -136,6 +136,10 @@
 }
 
 @media (max-width: 500px) {
+    .section-zero {
+        margin-top: 10vh;
+    }
+
     .section-zero-coming-soon {
         margin-top: 10vh;
     }
@@ -145,11 +149,11 @@
     }
 
     .section-badge {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .section-badge-team {
-        font-size: 2em;
+        font-size: 1em;
     }
 
 }
