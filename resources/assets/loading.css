@@ -88,5 +88,12 @@ body.fade-out {
     }
 }
 
+@media (max-width: 500px) {
+    #loading-text {
+        font-size: 2em;
+        letter-spacing: 4vw;
+    }
+}
+
 /* ------------------------------------------------------------------------- */
 
