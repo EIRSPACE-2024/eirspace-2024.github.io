@@ -147,6 +147,10 @@
         margin-right: auto;
     }
 
+    .team-member {
+        margin-bottom: 10px;
+    }
+
     .team-member img {
         max-width: 400px;
     }
