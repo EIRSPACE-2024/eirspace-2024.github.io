@@ -140,24 +140,20 @@
         margin-top: 5vh;
     }
 
-    .section-zero-coming-soon {
-        margin-top: 20vh;
-    }
-
     .section-content {
         left: 7vw;
     }
 
-    .section-content-coming-soon {
+    .section-content-coming-soon h1 {
         font-size: 2em;
     }
 
     .section-badge {
-        font-size: 1em;
+        font-size: 1.5em;
     }
 
     .section-badge-team {
-        font-size: 1em;
+        font-size: 1.5em;
     }
 }
 
