@@ -142,7 +142,9 @@
 
 @media (max-width: 500px) {
     .team-grid {
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         gap: 0px;
     }
 
