@@ -61,7 +61,7 @@ function generateStarField() {
         const x = Math.random() * pageWidth;
         const y = Math.random() * pageHeight;
 
-        const size = Math.random() * 3 + 1;
+        const size = Math.random() * 6 + 1;
         star.style.width = `${size}px`;
         star.style.height = `${size}px`;
         star.style.left = `${x}px`;
