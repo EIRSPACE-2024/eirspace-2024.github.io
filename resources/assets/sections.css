@@ -137,7 +137,7 @@
 
 @media (max-width: 500px) {
     .section-zero {
-        margin-top: 1vh;
+        margin-top: 0vh;
     }
 
     .section-content {
