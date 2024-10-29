@@ -114,13 +114,13 @@
     }
 
     .minipage-content-zero {
-        font-size: 1.5em;
+        font-size: 1.2em;
         letter-spacing: 0em;
     }
 
     .minipage-member img {
         width: 40%;
-        min-width: 200px;
+        min-width: 300px;
     }
 }
 
