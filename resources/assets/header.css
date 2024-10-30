@@ -13,7 +13,7 @@
     color: white;
     display: flex;
     transition: transform 1s ease;
-    z-index: 100;
+    z-index: 200;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -250,6 +250,10 @@
 @media (max-width: 500px) {
     .dropdown-links li a {
         font-size: 1em;
+    }
+
+    .menu-toggle {
+        margin-top: 5vh;
     }
 }
 
