@@ -14,7 +14,7 @@ body {
     color: #00FF41;
     font-family: 'VT323', monospace; /* retro */
     /* font-family: 'Courier New', Courier, monospace; /* alien */
-    background-color: black;
+    background-color: #0A1A2F;
 }
 
 a {
@@ -89,8 +89,8 @@ li {
 
 .shooting-star {
     position: absolute;
-    width: 2px;
-    height: 2px;
+    width: 4px;
+    height: 4px;
     background: white;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
     border-radius: 50%;
