@@ -3,80 +3,63 @@
 /* ------------------------------------------------------------------------- */
 
 .section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 4em 0;
+    margin-top: 10vh;
+    padding: 2rem;
+    text-align: center;
+    background: none;
 }
 
-.section-image {
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.section-member {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    transition: background-color 0.8s ease;
+}
+
+.section-member:hover {
+    background-color: #112240;
+}
+
+.section-member img {
+    z-index: 2;
     width: 100%;
     height: auto;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 10px;
-    z-index: 2;
 }
 
-.section-badge {
-    margin-top: 0vh;
-    margin-left: 4vw;
-    display: inline-block;
+.section-info {
     background: none;
-    position: relative;
-    padding: 0.2em 0.6em;
-    text-transform: uppercase;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+}
+
+.section-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-info h3 {
     font-family: 'Orbitron', sans-serif;
     color: white;
     font-size: 3em;
     transition: color 0.3s;
 }
 
-.section-badge a {
-    color: inherit;
-    text-decoration: none;
-    background: none;
-}
-
-.section-badge:hover {
-    color: #00FF41;
-}
-
-/* ------------------------------------------------------------------------- */
-/*                          FOR THE FORMER TEAMS                             */
-/* ------------------------------------------------------------------------- */
-
-.section-badge-team {
-    text-align: center;
-    margin-top: 8vh;
-    margin-bottom: 8vh;
-    background: none;
-    text-transform: uppercase;
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 3em;
-    transition: color 0.3s;
-}
-
-.section-badge-team a {
-    color: inherit;
-    text-decoration: none;
-    background: none;
-}
-
-.section-badge-team:hover {
+.section-info h3:hover {
     color: #00FF41;
 }
 
 /* ------------------------------------------------------------------------- */
 /*              SPECIAL FIRST SECTION, because of flex glitch                */
 /* ------------------------------------------------------------------------- */
-
-.section-zero {
-    margin-top: 20vh;
-}
 
 .section-content {
     left: 16vw;
@@ -129,10 +112,6 @@
     .section-badge {
         font-size: 2.5em;
     }
-
-    .section-badge-team {
-        font-size: 2em;
-    }
 }
 
 @media (max-width: 500px) {
@@ -149,10 +128,6 @@
     }
 
     .section-badge {
-        font-size: 1.5em;
-    }
-
-    .section-badge-team {
         font-size: 1.5em;
     }
 }
