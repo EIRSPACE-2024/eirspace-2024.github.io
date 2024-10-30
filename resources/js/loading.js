@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------- */
 
 const starField = document.querySelector('.star-field');
-const starDensity = 1 / 15000;
+const starDensity = 1 / 10000;
 
 /* ------------------------------------------------------------------------- */
 /*                          LOADING SCREEN                                   */

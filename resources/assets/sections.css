@@ -27,6 +27,11 @@
     background-color: #112240;
 }
 
+.section-member a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .section-member img {
     z-index: 2;
     width: 100%;
@@ -39,11 +44,6 @@
     background: none;
     margin-top: 1vh;
     margin-bottom: 1.5vh;
-}
-
-.section-info a {
-    text-decoration: none;
-    color: inherit;
 }
 
 .section-info h3 {
