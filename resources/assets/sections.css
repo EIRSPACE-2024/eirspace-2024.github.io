@@ -104,6 +104,10 @@
 }
 
 @media (max-width: 500px) {
+    .section {
+        margin-top: 20vh;
+    }
+
     .section-grid {
         display: block;
         margin-left: auto;
@@ -127,7 +131,7 @@
     }
 
     .section-content h1 {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
 
