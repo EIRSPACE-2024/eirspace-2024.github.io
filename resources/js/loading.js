@@ -44,6 +44,19 @@ document.querySelectorAll('a').forEach(link => {
     });
 });
 
+/* GO BACK LOADING. */
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', (event) => {
+        if (link.getAttribute('href') !== '#') {
+            event.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location = link.getAttribute('href');
+            }, 300);
+        }
+    });
+});
+
 /* ------------------------------------------------------------------------- */
 /*                      TO GENERATE A STAR FIELD                             */
 /* ------------------------------------------------------------------------- */
