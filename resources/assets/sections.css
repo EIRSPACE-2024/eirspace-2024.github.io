@@ -6,7 +6,6 @@
     margin-top: 10vh;
     padding: 2rem;
     text-align: center;
-    background: none;
 }
 
 .section-grid {
@@ -14,10 +13,12 @@
     grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
     gap: 40px;
     justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-member {
-    background-color: rgba(255, 255, 255, 0);
+    z-index: 100;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 10px;
     transition: background-color 0.8s ease;
@@ -27,13 +28,8 @@
     background-color: #112240;
 }
 
-.section-member a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .section-member img {
-    z-index: 2;
+    z-index: 100;
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -62,7 +58,7 @@
 /* ------------------------------------------------------------------------- */
 
 .section-content {
-    left: 16vw;
+    left: 6vw;
     position: absolute;
     border: none;
     background: none;
@@ -97,38 +93,37 @@
 /*                              SMALL SCREENS                                */
 /* ------------------------------------------------------------------------- */
 
-@media (max-width: 1350px) {
-    .section-badge {
-        margin-top: 5vh;
-        margin-left: 0vw;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-content {
-        left: 12vw;
+@media (max-width: 1200px) {
+    .section-grid {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
 
-    .section-badge {
-        font-size: 2.5em;
+    .section-info h3 {
+        font-size: 2em;
     }
 }
 
 @media (max-width: 500px) {
-    .section-content {
-        left: 7vw;
+    .section-grid {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .section-content h1 {
+    .section-member {
+        margin-bottom: 10px;
+    }
+
+    .section-member img {
+        max-width: 400px;
+    }
+
+    .section-info h3 {
         font-size: 1.5em;
     }
 
     .section-content-coming-soon h1 {
         font-size: 2em;
-    }
-
-    .section-badge {
-        font-size: 1.5em;
     }
 }
 

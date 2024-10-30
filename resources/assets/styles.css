@@ -88,6 +88,7 @@ li {
 }
 
 .shooting-star {
+    z-index: -10;
     position: absolute;
     width: 4px;
     height: 4px;
