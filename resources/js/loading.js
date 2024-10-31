@@ -1,11 +1,4 @@
 /* ------------------------------------------------------------------------- */
-/*                      TO GENERATE A STAR FIELD                             */
-/* ------------------------------------------------------------------------- */
-
-const starField = document.querySelector('.star-field');
-const starDensity = 1 / 10000;
-
-/* ------------------------------------------------------------------------- */
 /*                          LOADING SCREEN                                   */
 /* ------------------------------------------------------------------------- */
 
@@ -63,7 +56,7 @@ document.querySelectorAll('a').forEach(link => {
 
 function generateStarField() {
     const starField = document.querySelector('.star-field');
-    const starDensity = 1 / 15000;
+    const starDensity = 1 / 10000;
     const pageWidth = window.innerWidth;
     const pageHeight = document.body.scrollHeight;
 
