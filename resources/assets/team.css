@@ -6,7 +6,6 @@
     margin-top: 10vh;
     padding: 2rem;
     text-align: center;
-    background: none;
 }
 
 .team-grid {
@@ -17,14 +16,14 @@
 }
 
 .team-member {
-    background: none;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform background-color 0.5s ease;
 }
 
 .team-member:hover {
     transform: translateY(-5px);
+    background-color: #112240;
 }
 
 .team-member img {
@@ -33,10 +32,6 @@
     height: auto;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 1);
-}
-
-.member-info {
-    background: none;
 }
 
 .member-info h3 {
