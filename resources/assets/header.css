@@ -35,7 +35,7 @@
 }
 
 .logo-navbar img {
-    width: 60%;
+    width: auto;
     height: 60%;
     min-height: 40px;
     min-width: 12vw;
@@ -211,7 +211,7 @@
     }
 
     .menu-toggle {
-        margin-top: 0vh;
+        margin-top: 1vh;
         font-size: 2.4em;
     }
 }
@@ -229,7 +229,7 @@
     
     .menu-toggle {
         font-size: 5em;
-        margin-top: 0vh;
+        margin-top: 2.5vh;
     }
 
     .nav-links {
