@@ -118,6 +118,10 @@
 }
 
 @media (max-width: 500px) {
+    .footer-logo-center {
+        margin-top: 6vh;
+    }
+
     .social-links img {
         width: 20px; 
         height: 20px;
