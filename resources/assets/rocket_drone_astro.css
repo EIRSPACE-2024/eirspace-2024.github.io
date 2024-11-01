@@ -18,7 +18,12 @@
 }
 
 .minipage-member {
-    background: none;
+    z-index: 100;
+    transition: background-color 0.8s ease;
+}
+
+.minipage-member:hover {
+    background-color: #151515;    /* background-color: #112240; */
 }
 
 .minipage-member img {
@@ -27,6 +32,24 @@
     height: auto;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.minipage-info {
+    background: none;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+}
+
+.minipage-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.minipage-info h3:hover {
+    color: #00FF41;
 }
 
 .minipage-content {
@@ -69,6 +92,14 @@
     letter-spacing: 0.1em;
 }
 
+.minipage-grid-first {
+    display: flex;
+    max-width: 42vw;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ------------------------------------------------------------------------- */
 /*                              SMALL SCREENS                                */
 /* ------------------------------------------------------------------------- */
@@ -80,6 +111,10 @@
 
     .minipage-grid {
         grid: none;
+    }
+
+    .minipage-grid-first {
+        margin-top: 10vh;
     }
 
     .minipage-member img {
@@ -95,6 +130,11 @@
     .minipage-member img {
         min-width: 200px;
     }
+
+    .minipage-info h3 {
+        font-size: 1.5em;
+    }
+
 }
 
 @media (max-width: 1250px) {
@@ -105,6 +145,10 @@
     .minipage-content-zero {
         font-size: 1em;
         letter-spacing: 0em;
+    }
+
+    .minipage-grid-first {
+        max-width: 700px;
     }
 }
 
@@ -121,6 +165,14 @@
     .minipage-member img {
         width: 40%;
         min-width: 215px;
+    }
+
+    .minipage-info h3 {
+        font-size: 1.5em;
+    }
+
+    .minipage-content h1 {
+        font-size: 1.2em;
     }
 }
 
