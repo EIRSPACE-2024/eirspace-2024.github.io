@@ -178,7 +178,7 @@
     }
 
     .logo-navbar {
-        margin-right: -160px; /* The picture is too wide. */
+        margin-right: -140px; /* The picture is too wide. */
     }
 
     .nav-links {
@@ -218,18 +218,18 @@
 
 @media (max-width: 900px) {
     .navbar {
-        height: 20vh;
+        height: 18vh;
         min-height: 110px;
     }
 
     .logo-navbar img {
-        width: 60vw;
-        height: 60px;
+        width: auto;
+        height: 50px;
     }
     
     .menu-toggle {
         font-size: 5em;
-        margin-top: 2.5vh;
+        margin-top: 2vh;
     }
 
     .nav-links {
@@ -253,7 +253,7 @@
     }
 
     .menu-toggle {
-        margin-top: 3vh;
+        margin-top: 2.5vh;
     }
 }
 
