@@ -250,7 +250,7 @@
 
 @media (max-width: 500px) {
     .logo-navbar img {
-        width: 50%;
+        width: 55%;
     }
 
     .dropdown-links li a {
@@ -258,6 +258,7 @@
     }
 
     .menu-toggle {
+        font-size: 3.5em;
         margin-top: 2vh;
     }
 }
