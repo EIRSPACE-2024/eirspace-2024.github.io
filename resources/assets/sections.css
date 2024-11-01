@@ -69,6 +69,15 @@
     font-size: 2em;
 }
 
+.section-grid-first {
+    display: flex;
+    max-width: 42vw;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 /* ------------------------------------------------------------------------- */
 /*                              COMING SOON SECTION                          */
 /* ------------------------------------------------------------------------- */
@@ -98,6 +107,10 @@
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
 
+    .section-grid-first {
+        max-width: 700px;
+    }
+
     .section-info h3 {
         font-size: 2em;
     }
@@ -113,6 +126,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+
 
     .section-member {
         margin-bottom: 30px;
