@@ -23,7 +23,7 @@
 
 .team-member:hover {
     transform: translateY(-5px);
-    background-color: #112240;
+    background-color: 151515;    /* background-color: #112240; */
 }
 
 .team-member img {
