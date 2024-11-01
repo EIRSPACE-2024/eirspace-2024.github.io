@@ -14,7 +14,7 @@ body {
     color: #00FF41;
     font-family: 'VT323', monospace; /* retro */
     /* font-family: 'Courier New', Courier, monospace; /* alien */
-    background-color: #0A1A2F;
+    background-color: black; /* background-color: #0A1A2F; */
 }
 
 a {

@@ -25,7 +25,7 @@
 }
 
 .section-member:hover {
-    background-color: #112240;
+    background-color: #151515;    /* background-color: #112240; */
 }
 
 .section-member img {
