@@ -36,6 +36,7 @@ li {
 
 .image-container {
     z-index: 1;
+    background: none;
     max-width: 1000px;
     max-height: 1000px;
 }

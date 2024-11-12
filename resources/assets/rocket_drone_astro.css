@@ -28,6 +28,7 @@
 
 .minipage-member img {
     display: block;
+    background: none;
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
