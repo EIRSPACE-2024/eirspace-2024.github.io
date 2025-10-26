@@ -40,7 +40,12 @@ function typeWebPage(typingTextId, typingSpeed) {
 /* ------------------------------------------------------------------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
-    typeWebPage("typing-text_0", 40);
+    const typingElements = document.querySelectorAll('[id^="typing-text_"]');
+    typingElements.forEach((el, index) => {
+        setTimeout(() => {
+            typeWebPage(el.id, 40);
+        }, index * 3000);  // Delay each by 3s
+    });
 });
 
 /* ------------------------------------------------------------------------- */
