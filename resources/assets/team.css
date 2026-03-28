@@ -19,6 +19,10 @@
 }
 
 .team-member {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--color-border);
     transition: transform var(--duration-medium) ease, background-color var(--duration-medium) ease;
 }
@@ -31,18 +35,38 @@
 .team-member img {
     z-index: 2;
     width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.member-info {
+    min-height: 156px;
+    padding: 10px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
 }
 
 .member-info h3 {
-    font-size: clamp(1.4rem, 1rem + 1.9vw, 3rem);
+    font-size: clamp(1.1rem, 0.92rem + 1.1vw, 1.75rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .member-info h2 {
-    font-size: clamp(1.05rem, 0.8rem + 1.4vw, 2.5rem);
+    font-size: clamp(0.92rem, 0.8rem + 0.65vw, 1.22rem);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .member-info p {
-    font-size: clamp(0.95rem, 0.82rem + 0.7vw, 1.5rem);
+    font-size: clamp(0.88rem, 0.8rem + 0.38vw, 1rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -51,6 +75,10 @@
 
 .team-member-juju {
     background: none;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--color-border);
     opacity: 0;
     transition: all 5s ease 0S;
@@ -62,22 +90,39 @@
 
 .team-member-juju img {
     width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
 }
 
 .member-info-juju {
     background: none;
+    min-height: 156px;
+    padding: 10px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
 }
 
 .member-info-juju h3 {
-    font-size: clamp(1.4rem, 1rem + 1.9vw, 3rem);
+    font-size: clamp(1.1rem, 0.92rem + 1.1vw, 1.75rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .member-info-juju h2 {
-    font-size: clamp(1.05rem, 0.8rem + 1.4vw, 2.5rem);
+    font-size: clamp(0.92rem, 0.8rem + 0.65vw, 1.22rem);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .member-info-juju p {
-    font-size: clamp(0.95rem, 0.82rem + 0.7vw, 1.5rem);
+    font-size: clamp(0.88rem, 0.8rem + 0.38vw, 1rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -165,10 +210,17 @@
     .page-team .team-member,
     .page-team .team-member-juju {
         width: 100%;
+        max-width: 560px;
     }
 
     .page-team .section-badge-team {
         font-size: 1.8em;
+    }
+
+    .page-team .member-info,
+    .page-team .member-info-juju {
+        min-height: 144px;
+        padding: 9px 9px 11px;
     }
 }
 
@@ -201,6 +253,12 @@
         margin-top: 5vh;
         margin-bottom: 5vh;
         font-size: 1.5em;
+    }
+
+    .page-team .member-info,
+    .page-team .member-info-juju {
+        min-height: 126px;
+        padding: 8px 8px 10px;
     }
 }
 

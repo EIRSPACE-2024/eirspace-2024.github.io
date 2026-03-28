@@ -65,6 +65,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    background-color: var(--color-bg);
+}
+
 a {
     text-decoration: none;
     background: none;

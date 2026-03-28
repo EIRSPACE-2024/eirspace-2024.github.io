@@ -2,7 +2,9 @@
 /*   TO PUT AWAY THE NAVBAR WHEN SCROLLING DOWN, AND RETRIEVE IT WHEN S UP   */
 /* ------------------------------------------------------------------------- */
 
-let lastScrollTop = 0;
+let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+let ticking = false;
+const KEEP_VISIBLE_TOP_OFFSET = 24;
 const navbar = document.getElementById('navbar');
 const dropdownLinks = document.querySelector('.dropdown-links');
 const menuToggle = document.querySelector('.menu-toggle');
@@ -38,29 +40,36 @@ window.addEventListener('scroll', () => {
         return;
     }
 
+    if (ticking) {
+        return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(() => {
+        handleNavbarOnScroll();
+        ticking = false;
+    });
+}, { passive: true });
+
+/* ------------------------------------------------------------------------- */
+
+function handleNavbarOnScroll() {
+    if (!navbar) {
+        return;
+    }
+
     // Close the possible drop down menu.
     if (dropdownLinks && dropdownLinks.classList.contains('active')) {
         closeMenu();
     }
 
-    let st = window.pageYOffset || document.documentElement.scrollTop;
+    const st = window.pageYOffset || document.documentElement.scrollTop || 0;
 
-    if (document.body.classList.contains('page-exit')) {
-        navbar.style.transform = 'translateY(0)';
-        return;
-    }
+    // Keep navbar always available.
+    navbar.classList.remove('navbar-hidden');
 
-    if (st > lastScrollTop) {
-        // Bottom.
-        navbar.style.transform = 'translateY(-140%)';
-
-
-    } else {
-        // Upper.
-        navbar.style.transform = 'translateY(0)';
-    }
     lastScrollTop = st <= 0 ? 0 : st;
-});
+}
 
 /* ------------------------------------------------------------------------- */
 /*                      DROP DOWN MENU ANIMATION                             */
