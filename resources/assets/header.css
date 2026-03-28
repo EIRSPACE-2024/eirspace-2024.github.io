@@ -3,16 +3,16 @@
 /* ------------------------------------------------------------------------- */
 
 .navbar {
-    font-family: 'Orbitron', sans-serif;
+    font-family: var(--font-display);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 10vh;
     background-color: rgba(0, 0, 0, 0.80);
-    color: white;
+    color: var(--color-text);
     display: flex;
-    transition: transform 1s ease;
+    transition: transform var(--duration-navbar) ease;
     z-index: 200;
 }
 
@@ -29,7 +29,7 @@
 
 .logo-navbar a {
     text-decoration: none;
-    color: white;
+    color: var(--color-text);
     position: relative;
     overflow: hidden;
 }
@@ -61,7 +61,7 @@
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: var(--color-text);
     position: relative;
     overflow: hidden;
 }
@@ -71,7 +71,7 @@
     position: absolute;
     width: 100%;
     height: 1px;
-    background: white;
+    background: var(--color-text);
     bottom: 0;
     left: 50%;
     transform: translateX(-50%) scaleX(0);
@@ -80,6 +80,16 @@
 
 .nav-links a:hover::after {
     transform: translateX(-50%) scaleX(1);
+}
+
+.nav-links a.is-active {
+    color: var(--color-accent);
+}
+
+.nav-links a.is-active::after {
+    background: var(--color-accent);
+    transform: translateX(-50%) scaleX(1);
+    transition: transform 0.28s ease, background-color 0.28s ease;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -93,7 +103,7 @@
 
 .menu-toggle {
     font-size: 4em;
-    color: white;
+    color: var(--color-text);
     background: none;
     border: none;
     cursor: pointer;
@@ -125,7 +135,7 @@
 }
 
 .dropdown-links li a {
-    color: white;
+    color: var(--color-text);
     font-size: 1.5em;
     padding: 0.8em 0;
     text-decoration: none;
@@ -135,7 +145,14 @@
 }
 
 .dropdown-links li a:hover {
-    color: #00FF41;
+    color: var(--color-accent);
+}
+
+.dropdown-links li a.is-active {
+    color: var(--color-accent);
+    border-left: 2px solid var(--color-accent);
+    padding-left: 0.7em;
+    transition: color 0.2s ease, border-color 0.2s ease, padding-left 0.2s ease;
 }
 
 @keyframes dropdownItem {
@@ -260,6 +277,97 @@
     .menu-toggle {
         font-size: 3.5em;
         margin-top: 3.2vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        height: 15vh;
+        min-height: 96px;
+    }
+
+    .logo-navbar {
+        margin-left: 8vw;
+        margin-right: 0;
+        margin-top: 2.6vh;
+    }
+
+    .logo-navbar img {
+        width: 62%;
+        min-width: 170px;
+    }
+
+    .dropdown-menu {
+        margin-right: 6vw;
+        margin-top: 0;
+    }
+
+    .menu-toggle {
+        font-size: 4.2em;
+        margin-top: 2.2vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 14vh;
+        min-height: 90px;
+    }
+
+    .logo-navbar {
+        margin-left: 5vw;
+        margin-top: 2.1vh;
+    }
+
+    .logo-navbar img {
+        width: 56%;
+        min-width: 150px;
+    }
+
+    .menu-toggle {
+        font-size: 3.6em;
+        margin-top: 2.3vh;
+    }
+
+    .dropdown-links {
+        top: 82px;
+        padding: 1.4em;
+    }
+}
+
+@media (max-width: 390px) {
+    .navbar {
+        height: 13vh;
+        min-height: 84px;
+    }
+
+    .logo-navbar {
+        margin-left: 4vw;
+        margin-top: 2vh;
+    }
+
+    .logo-navbar img {
+        width: 52%;
+        min-width: 130px;
+    }
+
+    .dropdown-menu {
+        margin-right: 4vw;
+    }
+
+    .menu-toggle {
+        font-size: 3em;
+        margin-top: 2.2vh;
+    }
+
+    .dropdown-links {
+        top: 76px;
+        padding: 1.1em;
+    }
+
+    .dropdown-links li a {
+        font-size: 0.95em;
+        padding: 0.45em 0;
     }
 }
 

@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>EIRSPACE</title>
+    <title>EIRSPACE - Team</title>
+    <meta name="description" content="Decouvrez l'equipe EIRSPACE actuelle et les membres qui font vivre les projets aerospatiaux de l'association.">
 	<link rel="apple-touch-icon" sizes="180x180" href="static/logo/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="static/logo/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="static/logo/favicon-16x16.png">
     <link rel="stylesheet" href="resources/assets/styles.css">
+    <link rel="stylesheet" href="resources/assets/components.css">
     <link rel="stylesheet" href="resources/assets/header.css">
     <link rel="stylesheet" href="resources/assets/sections.css">
     <link rel="stylesheet" href="resources/assets/footer.css">
     <link rel="stylesheet" href="resources/assets/conversion.css">
     <link rel="stylesheet" href="resources/assets/loading.css">
     <link rel="stylesheet" href="resources/assets/team.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap">
 </head>
 
-<body>
+<body class="page-team">
 
     <!-- LOADING SCREEN -->
     <div id="loading-screen">
@@ -31,27 +31,28 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
-        <div class="logo-navbar"><a href="./index.html"><img loading="lazy" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace"></img></a></div>
+    <nav class="navbar" id="navbar" aria-label="Navigation principale">
+        <div class="logo-navbar"><a href="./index.html"><img loading="lazy" decoding="async" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace"></img></a></div>
         <ul class="nav-links">
             <li><a href="./team.html">TEAM</a></li>
             <li><a href="./rocket.html">ROCKET</a></li>
             <li><a href="./drone.html">DRONE</a></li>
             <li><a href="./astronomy.html">ASTRONOMY</a></li>
             <li><a href="./partnership.html">PARTNERSHIP</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
         </ul>
 
         <div class="dropdown-menu">
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <ul class="dropdown-links">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu de navigation">☰</button>
+        <ul class="dropdown-links" id="primary-menu">
             <li><a href="./team.html">TEAM</a></li>
             <li><a href="./rocket.html">ROCKET</a></li>
             <li><a href="./drone.html">DRONE</a></li>
             <li><a href="./astronomy.html">ASTRONOMY</a></li>
             <li><a href="./partnership.html">PARTNERSHIP</a></li>
-            <li><a target="_blank" href="https://t.me/Eirspace_EMMK">TELEGRAM</a></li>
-            <li><a target="_blank" href="https://www.instagram.com/eirspace_">INSTAGRAM</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/company/eirspace">LINKEDIN</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://t.me/Eirspace_EMMK">TELEGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/eirspace_">INSTAGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/eirspace">LINKEDIN</a></li>
             <li><a href="./video.html">VIDEO</a></li>
             <li><a href="./projects.html">PROJECTS</a></li>
         </ul>
@@ -62,8 +63,8 @@
     <div class="shooting-star-field"></div>
 
     <!-- CONTENT OF THE PAGE -->
-    <section class="section" style="margin-top: 20vh; text-align: left;" id="section0">
-        <div class="section-content" style="font-size: 1.5em;"> 
+    <section class="section team-hero" id="section0">
+        <div class="section-content team-hero-content"> 
             <h1 id="typing-text_0" data-text="In Space No One Can Hear You Scream - Kane"></h1>
         </div>
     </section>
@@ -77,7 +78,7 @@
         </div>
         <div class="team-grid">
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Manal_Sottouti.jpg" alt="Manal Sottouti">
+                <img loading="eager" fetchpriority="high" decoding="async"  src="./static/team/2025-2026/Manal_Sottouti.jpg" alt="Manal Sottouti">
                 <div class="member-info">
                     <h3>Manal Sottouti</h3>
                     <h2>Présidente</h2>
@@ -86,7 +87,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Matis_Cinchetti.jpg" alt="Matis Cinchetti">
+                <img loading="eager" fetchpriority="high" decoding="async"  src="./static/team/2025-2026/Matis_Cinchetti.jpg" alt="Matis Cinchetti">
                 <div class="member-info">
                     <h3>Matis Cinchetti</h3>
                     <h2>Co - Vice - President/Respo Local/Secretary...</h2>
@@ -95,7 +96,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Merwan_Mati.jpg" alt="Merwan Mati">
+                <img loading="eager" fetchpriority="high" decoding="async"  src="./static/team/2025-2026/Merwan_Mati.jpg" alt="Merwan Mati">
                 <div class="member-info">
                     <h3>Merwan Mati</h3>
                     <h2>Co - Vice - President/Respo Partnership/Respo Drone</h2>
@@ -104,7 +105,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Iulian_Vlas.jpg" alt="Iulian Vlas">
+                <img loading="eager" fetchpriority="high" decoding="async"  src="./static/team/2025-2026/Iulian_Vlas.jpg" alt="Iulian Vlas">
                 <div class="member-info">
                     <h3>Iulian Vlas</h3>
                     <h2>Treasurer/Respo Web</h2>
@@ -113,7 +114,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Lili_Varnier.jpg" alt="Lili Varnier">
+                <img loading="lazy" decoding="async"  src="./static/team/2025-2026/Lili_Varnier.jpg" alt="Lili Varnier">
                 <div class="member-info">
                     <h3>Lili Varnier</h3>
                     <h2>Co - Respo Com</h2>
@@ -122,7 +123,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Titouan_Yvinec.jpg" alt="Titouan Yvinec">
+                <img loading="lazy" decoding="async"  src="./static/team/2025-2026/Titouan_Yvinec.jpg" alt="Titouan Yvinec">
                 <div class="member-info">
                     <h3>Titouan Yvinec</h3>
                     <h2>Co - Respo Com</h2>
@@ -131,7 +132,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Pierre_Boudy.jpg" alt="Pierre Boudy">
+                <img loading="lazy" decoding="async"  src="./static/team/2025-2026/Pierre_Boudy.jpg" alt="Pierre Boudy">
                 <div class="member-info">
                     <h3>Pierre Boudy</h3>
                     <h2>Respo Log</h2>
@@ -140,7 +141,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Emile_Bronnec.jpg" alt="Emile Bronnec">
+                <img loading="lazy" decoding="async"  src="./static/team/2025-2026/Emile_Bronnec.jpg" alt="Emile Bronnec">
                 <div class="member-info">
                     <h3>Emile Bronnec</h3>
                     <h2>Respo Fusées</h2>
@@ -149,7 +150,7 @@
             </div>
 
               <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Ethan_Garchery.jpg" alt="Ethan Garchery">
+                <img loading="lazy" decoding="async"  src="./static/team/2025-2026/Ethan_Garchery.jpg" alt="Ethan Garchery">
                 <div class="member-info">
                     <h3>Ethan Garchery</h3>
                     <h2>Respo Drone FPV</h2>
@@ -158,7 +159,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2025-2026/Aurélien_Barthere.jpg" alt="Aurélien Barthere">
+                <img loading="lazy" decoding="async"  src="./static/team/2025-2026/Aurélien_Barthere.jpg" alt="Aurélien Barthere">
                 <div class="member-info">
                     <h3>Aurélien Barthere</h3>
                     <h2>Respo Astro</h2>
@@ -167,7 +168,7 @@
             </div>
 
             <div class="team-member-juju">
-                <img loading="lazy"  src="./static/team/Jhon_Dooe.webp" alt="joker">
+                <img loading="lazy" decoding="async"  src="./static/team/Jhon_Dooe.webp" alt="joker">
                 <div class="member-info-juju">
                     <h3>Aymeric Artaud</h3>
                     <h2>The Fourteenth Passenger</h2>
@@ -189,7 +190,7 @@
 
         <div class="team-grid">
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/LouisD.webp" alt="Louis Deramat">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/LouisD.webp" alt="Louis Deramat">
                 <div class="member-info">
                     <h3>Louis Deramat</h3>
                     <h2>President</h2>
@@ -198,7 +199,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/Shakty.webp" alt="Shakty Kerrach">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/Shakty.webp" alt="Shakty Kerrach">
                 <div class="member-info">
                     <h3>Shakty Robert</h3>
                     <h2>Vice - President</h2>
@@ -207,7 +208,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/David.webp" alt="David">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/David.webp" alt="David">
                 <div class="member-info">
                     <h3>David Yan</h3>
                     <h2>Treasurer</h2>
@@ -216,7 +217,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/William.webp" alt="William">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/William.webp" alt="William">
                 <div class="member-info">
                     <h3>William Ye</h3>
                     <h2>Secretary</h2>
@@ -225,7 +226,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/Hugo.webp" alt="Hugo">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/Hugo.webp" alt="Hugo">
                 <div class="member-info">
                     <h3>Hugo Baldo</h3>
                     <h2>Respo Com</h2>
@@ -234,7 +235,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/Fati.webp" alt="Fati">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/Fati.webp" alt="Fati">
                 <div class="member-info">
                     <h3>Fatima El Meady</h3>
                     <h2>Respo Partnership</h2>
@@ -243,7 +244,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/Hajar.webp" alt="Hajar">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/Hajar.webp" alt="Hajar">
                 <div class="member-info">
                     <h3>Hajar Zegdane</h3>
                     <h2>Respo Event</h2>
@@ -252,7 +253,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/Anass.webp" alt="Anass">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/Anass.webp" alt="Anass">
                 <div class="member-info">
                     <h3>Anass El Kabbaj</h3>
                     <h2>Respo Rocket</h2>
@@ -261,7 +262,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/LouisE.webp" alt="Louis Escot">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/LouisE.webp" alt="Louis Escot">
                 <div class="member-info">
                     <h3>Louis Escot</h3>
                     <h2>Respo Drone</h2>
@@ -270,7 +271,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/Jhon_Dooe.webp" alt="Raph">
+                <img loading="lazy" decoding="async"  src="./static/team/Jhon_Dooe.webp" alt="Raph">
                 <div class="member-info">
                     <h3>Raphael Debache</h3>
                     <h2>Respo Drone</h2>
@@ -279,7 +280,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/Julien.webp" alt="Julien Gallais">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/Julien.webp" alt="Julien Gallais">
                 <div class="member-info">
                     <h3>Julien Gallais</h3>
                     <h2>Drone Master</h2>
@@ -288,7 +289,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/Morgane.webp" alt="Morgane">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/Morgane.webp" alt="Morgane">
                 <div class="member-info">
                     <h3>Morgane Petitdemange</h3>
                     <h2>Respo Astro</h2>
@@ -297,7 +298,7 @@
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/team/2024-2025/Damien.webp" alt="Damien">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/Damien.webp" alt="Damien">
                 <div class="member-info">
                     <h3>Damien Delpy</h3>
                     <h2>Web Master</h2>
@@ -306,7 +307,7 @@
             </div>
 
             <div class="team-member-juju">
-                <img loading="lazy"  src="./static/team/2024-2025/NouveauMembreJuluanDuBDA.png" alt="joker">
+                <img loading="lazy" decoding="async"  src="./static/team/2024-2025/NouveauMembreJuluanDuBDA.png" alt="joker">
                 <div class="member-info-juju">
                     <h3>Juluan Voisin</h3>
                     <h2>The Fourteenth Passenger</h2>
@@ -337,35 +338,35 @@
         </ul>
 
         <div class="footer-logo-center">
-            <a href="#">
-                <img loading="lazy" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo">
+            <a href="./index.html">
+                <img loading="lazy" decoding="async" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo">
             </a>
         </div>
 
         <ul class="social-links">
             <li>
-                <a href="https://www.instagram.com/eirspace_" target="_blank" aria-label="Instagram">
-                    <img loading="lazy" src="./static/social/instagram.svg" alt="Instagram Logo">
+                <a href="https://www.instagram.com/eirspace_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img loading="lazy" decoding="async" src="./static/social/instagram.svg" alt="Instagram Logo">
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/company/eirspace" target="_blank" aria-label="LinkedIn">
-                    <img loading="lazy" src="./static/social/linkedin.svg" alt="LinkedIn Logo">
+                <a href="https://www.linkedin.com/company/eirspace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img loading="lazy" decoding="async" src="./static/social/linkedin.svg" alt="LinkedIn Logo">
                 </a>
             </li>
             <li>
-                <a href="https://t.me/Eirspace_EMMK" target="_blank" aria-label="Telegram">
-                    <img loading="lazy" src="./static/social/telegram.svg" alt="Telegram Logo">
+                <a href="https://t.me/Eirspace_EMMK" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                    <img loading="lazy" decoding="async" src="./static/social/telegram.svg" alt="Telegram Logo">
                 </a>
             </li>
             <li>
-                <a href="https://github.com/EIRSPACE-2024" target="_blank" aria-label="Github">
-                    <img loading="lazy" src="./static/social/github.svg" alt="Github Logo">
+                <a href="https://github.com/EIRSPACE-2024" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                    <img loading="lazy" decoding="async" src="./static/social/github.svg" alt="Github Logo">
                 </a>
             </li>
             <li>
-                <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" aria-label="Enseirb">
-                    <img loading="lazy" src="./static/social/enseirb.svg" alt="Enseirb Logo">
+                <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" rel="noopener noreferrer" aria-label="Enseirb">
+                    <img loading="lazy" decoding="async" src="./static/social/enseirb.svg" alt="Enseirb Logo">
                 </a>
             </li>
         </ul>
@@ -376,10 +377,10 @@
     </div>
 </footer>       
 
-<script src="resources/js/loading.js"></script>
-<script src="resources/js/shooting_stars.js"></script>
-<script src="resources/js/navbar.js"></script>
-<script src="resources/js/typing.js"></script>
+<script defer src="resources/js/loading.js"></script>
+<script defer src="resources/js/shooting_stars.js"></script>
+<script defer src="resources/js/navbar.js"></script>
+<script defer src="resources/js/typing.js"></script>
 
 </body>
 </html>

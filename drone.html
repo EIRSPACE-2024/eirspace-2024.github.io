@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>EIRSPACE</title>
+    <title>EIRSPACE - Drone</title>
+    <meta name="description" content="Pole drone EIRSPACE: participation au concours DroneLoad, conception systeme et IA embarquee.">
 	<link rel="apple-touch-icon" sizes="180x180" href="static/logo/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="static/logo/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="static/logo/favicon-16x16.png">
     <link rel="stylesheet" href="resources/assets/styles.css">
+    <link rel="stylesheet" href="resources/assets/components.css">
     <link rel="stylesheet" href="resources/assets/header.css">
     <link rel="stylesheet" href="resources/assets/sections.css">
     <link rel="stylesheet" href="resources/assets/rocket_drone_astro.css">
     <link rel="stylesheet" href="resources/assets/footer.css">
     <link rel="stylesheet" href="resources/assets/conversion.css">
     <link rel="stylesheet" href="resources/assets/loading.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap">
 </head>
 
-<body>
+<body class="page-drone">
 
     <!-- LOADING SCREEN -->
     <div id="loading-screen">
@@ -31,27 +31,28 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
-        <div class="logo-navbar"><a href="./index.html"><img loading="lazy" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace"></img></a></div>
+    <nav class="navbar" id="navbar" aria-label="Navigation principale">
+        <div class="logo-navbar"><a href="./index.html"><img loading="lazy" decoding="async" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace"></img></a></div>
         <ul class="nav-links">
             <li><a href="./team.html">TEAM</a></li>
             <li><a href="./rocket.html">ROCKET</a></li>
             <li><a href="./drone.html">DRONE</a></li>
             <li><a href="./astronomy.html">ASTRONOMY</a></li>
             <li><a href="./partnership.html">PARTNERSHIP</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
         </ul>
 
         <div class="dropdown-menu">
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <ul class="dropdown-links">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu de navigation">☰</button>
+        <ul class="dropdown-links" id="primary-menu">
             <li><a href="./team.html">TEAM</a></li>
             <li><a href="./rocket.html">ROCKET</a></li>
             <li><a href="./drone.html">DRONE</a></li>
             <li><a href="./astronomy.html">ASTRONOMY</a></li>
             <li><a href="./partnership.html">PARTNERSHIP</a></li>
-            <li><a target="_blank" href="https://t.me/Eirspace_EMMK">TELEGRAM</a></li>
-            <li><a target="_blank" href="https://www.instagram.com/eirspace_">INSTAGRAM</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/company/eirspace">LINKEDIN</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://t.me/Eirspace_EMMK">TELEGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/eirspace_">INSTAGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/eirspace">LINKEDIN</a></li>
             <li><a href="./video.html">VIDEO</a></li>
             <li><a href="./projects.html">PROJECTS</a></li>
         </ul>
@@ -62,7 +63,7 @@
     <div class="shooting-star-field"></div>
 
     <!-- CONTENT OF THE PAGE -->
-    <section class="minipage-section-zero" loading="lazy" id="minipage0">
+    <section class="minipage-section-zero" id="minipage0">
         <div class="minipage-grid-zero">
             <div class=minipage-member>
             <div class="minipage-content-zero"> 
@@ -72,18 +73,18 @@
 
             <div class="minipage-member">
             <div class="image-container">
-                <img loading="lazy" src="./static/drone/drone_0.webp" alt="user">
+                <img loading="lazy" decoding="async" src="./static/drone/drone_0.webp" alt="user">
             </div>
             </div>
 
         </div>
     </section>
 
-    <section class="minipage-section" loading="lazy" style="margin-bottom: 10vh;" id="minipage1">
+    <section class="minipage-section minipage-section-spaced" id="minipage1">
         <div class="minipage-grid">
             <div class=minipage-member>
             <div class="image-container">
-                <img loading="lazy"  style="width: 100%;" src="./static/drone/drone_03.webp" alt="user">
+                <img loading="lazy" decoding="async"  style="width: 100%;" src="./static/drone/drone_03.webp" alt="user">
                 <div class="minipage-info">
                     <h3>
                         DroneLoad 2024
@@ -101,7 +102,7 @@ Le pôle drone se donne pour objectif de participer chaque année au concours Dr
         </div>
     </section>
 
-    <section class="minipage-section" loading="lazy" id="minipage2">
+    <section class="minipage-section" id="minipage2">
         <div class="minipage-grid">
             <div class=minipage-member>
             <div class="minipage-content"> 
@@ -113,7 +114,7 @@ Eirspace a participé plusieurs fois au concours depuis sa création en 2017.Le 
 
             <div class="minipage-member">
             <div class="image-container">
-                <img loading="lazy"  style="width: 100%;" src="./static/drone/drone_02.webp" alt="user">
+                <img loading="lazy" decoding="async"  style="width: 100%;" src="./static/drone/drone_02.webp" alt="user">
                 <div class="minipage-info">
                     <h3>
                         DroneLoad 2024
@@ -125,11 +126,11 @@ Eirspace a participé plusieurs fois au concours depuis sa création en 2017.Le 
         </div>
     </section>
 
-    <section class="minipage-section" loading="lazy" style="margin-bottom: 10vh;" id="minipage3">
+    <section class="minipage-section minipage-section-spaced" id="minipage3">
         <div class="minipage-grid">
             <div class=minipage-member>
             <div class="image-container">
-                <img loading="lazy"  style="width: 100%;" src="./static/drone/drone_01.webp" alt="user">
+                <img loading="lazy" decoding="async"  style="width: 100%;" src="./static/drone/drone_01.webp" alt="user">
                 <div class="minipage-info">
                     <h3>
                         Drone Design Diagram
@@ -160,35 +161,35 @@ Il analyse son environnement grâce notamment à la reconnaissance d’images pa
         </ul>
 
         <div class="footer-logo-center">
-            <a href="#">
-                <img loading="lazy" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo">
+            <a href="./index.html">
+                <img loading="lazy" decoding="async" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo">
             </a>
         </div>
 
         <ul class="social-links">
             <li>
-                <a href="https://www.instagram.com/eirspace_" target="_blank" aria-label="Instagram">
-                    <img loading="lazy" src="./static/social/instagram.svg" alt="Instagram Logo">
+                <a href="https://www.instagram.com/eirspace_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img loading="lazy" decoding="async" src="./static/social/instagram.svg" alt="Instagram Logo">
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/company/eirspace" target="_blank" aria-label="LinkedIn">
-                    <img loading="lazy" src="./static/social/linkedin.svg" alt="LinkedIn Logo">
+                <a href="https://www.linkedin.com/company/eirspace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img loading="lazy" decoding="async" src="./static/social/linkedin.svg" alt="LinkedIn Logo">
                 </a>
             </li>
             <li>
-                <a href="https://t.me/Eirspace_EMMK" target="_blank" aria-label="Telegram">
-                    <img loading="lazy" src="./static/social/telegram.svg" alt="Telegram Logo">
+                <a href="https://t.me/Eirspace_EMMK" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                    <img loading="lazy" decoding="async" src="./static/social/telegram.svg" alt="Telegram Logo">
                 </a>
             </li>
             <li>
-                <a href="https://github.com/EIRSPACE-2024" target="_blank" aria-label="Github">
-                    <img loading="lazy" src="./static/social/github.svg" alt="Github Logo">
+                <a href="https://github.com/EIRSPACE-2024" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                    <img loading="lazy" decoding="async" src="./static/social/github.svg" alt="Github Logo">
                 </a>
             </li>
             <li>
-                <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" aria-label="Enseirb">
-                    <img loading="lazy" src="./static/social/enseirb.svg" alt="Enseirb Logo">
+                <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" rel="noopener noreferrer" aria-label="Enseirb">
+                    <img loading="lazy" decoding="async" src="./static/social/enseirb.svg" alt="Enseirb Logo">
                 </a>
             </li>
         </ul>
@@ -199,10 +200,10 @@ Il analyse son environnement grâce notamment à la reconnaissance d’images pa
     </div>
 </footer>       
 
-<script src="resources/js/loading.js"></script>
-<script src="resources/js/shooting_stars.js"></script>
-<script src="resources/js/navbar.js"></script>
-<script src="resources/js/typing.js"></script>
+<script defer src="resources/js/loading.js"></script>
+<script defer src="resources/js/shooting_stars.js"></script>
+<script defer src="resources/js/navbar.js"></script>
+<script defer src="resources/js/typing.js"></script>
 
 </body>
 </html>
