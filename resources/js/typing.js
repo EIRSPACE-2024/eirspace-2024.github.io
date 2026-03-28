@@ -1,124 +1,52 @@
 /* ------------------------------------------------------------------------- */
-/*                     TYPE TEXT WHEN ELEMENT ENTERS VIEWPORT                */
+/*                              TO TYPE A TEXT                               */
 /* ------------------------------------------------------------------------- */
 
-(function () {
-    const DEFAULT_TYPING_SPEED = 40;
-    const TYPING_SELECTOR = '[id^="typing-text_"]';
-    const typedElements = new WeakSet();
+function typeEffect(element, text, speed) {
+    let i = 0;
 
-    function normalizeText(rawText) {
-        if (typeof rawText !== 'string') {
-            return '';
-        }
-
-        return rawText
-            .replace(/<CR>/gi, '\n')
-            .replace(/<BR>/gi, '\n');
-    }
-
-    function typeEffect(element, text, speed) {
-        const chars = text.split('');
-        let index = 0;
-        let currentTextNode = document.createTextNode('');
-
-        element.textContent = '';
-        element.appendChild(currentTextNode);
-
-        function typeNext() {
-            if (index >= chars.length) {
-                return;
-            }
-
-            const char = chars[index];
-            index += 1;
-
-            if (char === '\n') {
-                element.appendChild(document.createElement('br'));
-                currentTextNode = document.createTextNode('');
-                element.appendChild(currentTextNode);
+    function type() {
+        if (i < text.length) {
+            if (text.charAt(i) == '<') {
+                // EOL.
+                element.innerHTML += '<BR>';
+                i += 4;
             } else {
-                currentTextNode.textContent += char;
+                element.innerHTML += text.charAt(i);
+                i++;
             }
 
-            window.setTimeout(typeNext, speed);
+            setTimeout(() => {
+                setTimeout(type, speed);
+            }, speed / 2);
         }
-
-        typeNext();
     }
 
-    function typeElementOnce(element, speed) {
-        if (!element || typedElements.has(element)) {
-            return;
-        }
+    type();
+}
 
-        typedElements.add(element);
-        const sourceText = normalizeText(element.getAttribute('data-text'));
-        typeEffect(element, sourceText, speed);
-    }
+/* ------------------------------------------------------------------------- */
+/*                              ON THE WEB PAGE                              */
+/* ------------------------------------------------------------------------- */
 
-    function isVisibleInViewport(element) {
-        const rect = element.getBoundingClientRect();
 
-        return (
-            rect.bottom > 0 &&
-            rect.right > 0 &&
-            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.left < (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+function typeWebPage(typingTextId, typingSpeed) {
+    const targetElement = document.getElementById(typingTextId);
+    const text = targetElement.getAttribute("data-text")
 
-    function typeVisibleElements(elements, speed) {
-        elements.forEach((element) => {
-            if (isVisibleInViewport(element)) {
-                typeElementOnce(element, speed);
-            }
-        });
-    }
+    typeEffect(targetElement, text, typingSpeed);
+}
 
-    function setupTypingObserver(elements, speed) {
-        if (!('IntersectionObserver' in window)) {
-            elements.forEach((element) => {
-                typeElementOnce(element, speed);
-            });
-            return;
-        }
+/* ------------------------------------------------------------------------- */
 
-        const observer = new IntersectionObserver((entries, io) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting || entry.intersectionRatio > 0) {
-                    typeElementOnce(entry.target, speed);
-                    io.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.01
-        });
-
-        elements.forEach((element) => {
-            if (!typedElements.has(element)) {
-                observer.observe(element);
-            }
-        });
-
-        typeVisibleElements(elements, speed);
-
-        const checkAfterJump = function () {
-            typeVisibleElements(elements, speed);
-        };
-
-        window.addEventListener('load', checkAfterJump);
-        window.addEventListener('hashchange', checkAfterJump);
-
-        window.setTimeout(checkAfterJump, 0);
-        window.requestAnimationFrame(checkAfterJump);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const typingElements = Array.from(document.querySelectorAll(TYPING_SELECTOR));
-        setupTypingObserver(typingElements, DEFAULT_TYPING_SPEED);
+document.addEventListener("DOMContentLoaded", () => {
+    const typingElements = document.querySelectorAll('[id^="typing-text_"]');
+    typingElements.forEach((el, index) => {
+        setTimeout(() => {
+            typeWebPage(el.id, 40);
+        }, index * 3000);  // Delay each by 3s
     });
-})();
+});
 
 /* ------------------------------------------------------------------------- */
 
