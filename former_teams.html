@@ -1,21 +1,76 @@
----
-layout: default
-title: EIRSPACE - Former Teams
-description: Anciennes equipes EIRSPACE: membres, roles et archives des promotions precedentes.
-permalink: /former_teams.html
-styles:
-    - resources/assets/team.css
-loading_screen: false
-star_field: false
-include_loading_js: false
-include_shooting_stars_js: false
-include_typing_js: false
----
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EIRSPACE - Former Teams</title>
+    <meta name="description" content="Archive des anciennes equipes EIRSPACE et des promotions precedentes de l'association aerospatiale.">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/logo/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="static/logo/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="static/logo/favicon-16x16.png">
+    <link rel="stylesheet" href="resources/assets/styles.css">
+    <link rel="stylesheet" href="resources/assets/components.css">
+    <link rel="stylesheet" href="resources/assets/header.css">
+    <link rel="stylesheet" href="resources/assets/sections.css">
+    <link rel="stylesheet" href="resources/assets/footer.css">
+    <link rel="stylesheet" href="resources/assets/conversion.css">
+    <!-- Performances issue.
+    <link rel="stylesheet" href="resources/assets/loading.css">
+    -->
+    <link rel="stylesheet" href="resources/assets/team.css">
+</head>
 
-<!-- CONTENT OF THE PAGE -->
+<body>
+
+    <!-- Performances issue.
+    <div id="loading-screen">
+        <div id="loading-text">
+            <span class="letter">E</span><span class="letter">i</span><span class="letter">R</span>
+            <span class="letter">s</span><span class="letter">P</span><span class="letter">A</span>
+            <span class="letter">C</span><span class="letter">E</span>
+        </div>
+    </div>
+    -->
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar" aria-label="Navigation principale">
+        <div class="logo-navbar"><a href="./index.html"><img loading="lazy" decoding="async" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace"></img></a></div>
+        <ul class="nav-links">
+            <li><a href="./team.html">TEAM</a></li>
+            <li><a href="./rocket.html">ROCKET</a></li>
+            <li><a href="./drone.html">DRONE</a></li>
+            <li><a href="./astronomy.html">ASTRONOMY</a></li>
+            <li><a href="./partnership.html">PARTNERSHIP</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
+        </ul>
+
+        <div class="dropdown-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu de navigation">☰</button>
+        <ul class="dropdown-links" id="primary-menu">
+            <li><a href="./team.html">TEAM</a></li>
+            <li><a href="./rocket.html">ROCKET</a></li>
+            <li><a href="./drone.html">DRONE</a></li>
+            <li><a href="./astronomy.html">ASTRONOMY</a></li>
+            <li><a href="./partnership.html">PARTNERSHIP</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://t.me/Eirspace_EMMK">TELEGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/eirspace_">INSTAGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/eirspace">LINKEDIN</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
+            <li><a href="./projects.html">PROJECTS</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- Performances issue.
+    <div class="star-field"></div>
+    <div class="shooting-star-field"></div>
+    -->
+
+    <!-- CONTENT OF THE PAGE -->
 
     <div class="section-badge-team" style="margin-top:30vh;">
-        <a target="_blank" href="https://wiki.eirb.fr/index.php?title=EirSpace">
+        <a target="_blank" rel="noopener noreferrer" href="https://wiki.eirb.fr/index.php?title=EirSpace">
             >> WIKI <<
         </a>
     </div>
@@ -29,7 +84,7 @@ include_typing_js: false
 
         <div class="team-grid">
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Florian.webp" alt="Florian">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Florian.webp" alt="Florian">
                 <div class="member-info">
                     <h3>Florian Royon-Chalendard</h3>
                     <h2>President</h2>
@@ -38,7 +93,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Mary.webp" alt="Mary">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Mary.webp" alt="Mary">
                 <div class="member-info">
                     <h3>Mary-Selva Alves</h3>
                     <h2>Vice - Presidente</h2>
@@ -47,7 +102,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Paul.webp" alt="Paul">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Paul.webp" alt="Paul">
                 <div class="member-info">
                     <h3>Paul-Maeckel Evelanyou Ondua</h3>
                     <h2>Treasurer</h2>
@@ -56,7 +111,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Meriem.webp" alt="Meriem">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Meriem.webp" alt="Meriem">
                 <div class="member-info">
                     <h3>Meriem Liateni</h3>
                     <h2>Secretary</h2>
@@ -65,7 +120,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Oihan.webp" alt="Oihan">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Oihan.webp" alt="Oihan">
                 <div class="member-info">
                     <h3>Oihan Dulhoste</h3>
                     <h2>Respo Com</h2>
@@ -74,7 +129,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/JulesM.webp" alt="JulesM">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/JulesM.webp" alt="JulesM">
                 <div class="member-info">
                     <h3>Jules Merieux-Guerraz</h3>
                     <h2>Respo Partnership</h2>
@@ -83,7 +138,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Pierrick.webp" alt="Pierrick">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Pierrick.webp" alt="Pierrick">
                 <div class="member-info">
                     <h3>Pierrick Laurant</h3>
                     <h2>Respo Logistics</h2>
@@ -92,7 +147,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Mary.webp" alt="Mary">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Mary.webp" alt="Mary">
                 <div class="member-info">
                     <h3>Mary-Selva Alves</h3>
                     <h2>Respo Rocket</h2>
@@ -101,7 +156,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Bastien.webp" alt="Bastien">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Bastien.webp" alt="Bastien">
                 <div class="member-info">
                     <h3>Bastien Huet</h3>
                     <h2>Respo Drone</h2>
@@ -110,7 +165,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Jules.webp" alt="Jules">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Jules.webp" alt="Jules">
                 <div class="member-info">
                     <h3>Jules Duchiron</h3>
                     <h2>Respo Drone</h2>
@@ -119,7 +174,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2023_2024/Remi.webp" alt="Remi">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2023_2024/Remi.webp" alt="Remi">
                 <div class="member-info">
                     <h3>Remi Servajean</h3>
                     <h2>Respo Astro</h2>
@@ -141,7 +196,7 @@ include_typing_js: false
 
         <div class="team-grid">
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2019_2020/Yohan.webp" alt="Yohan">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2019_2020/Yohan.webp" alt="Yohan">
                 <div class="member-info">
                     <h3>Yohan Bellanger</h3>
                     <h2>President</h2>
@@ -150,7 +205,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2019_2020/Leo.webp" alt="Leo">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2019_2020/Leo.webp" alt="Leo">
                 <div class="member-info">
                     <h3>Leo Colonna D'Istria</h3>
                     <h2>Treasurer</h2>
@@ -159,7 +214,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2019_2020/Melanie.webp" alt"Melanie">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2019_2020/Melanie.webp" alt="Melanie">
                 <div class="member-info">
                     <h3>Melanie Acelor N'Dambani</h3>
                     <h2>Secretary</h2>
@@ -168,7 +223,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2019_2020/Anais.webp" alt="Anais">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2019_2020/Anais.webp" alt="Anais">
                 <div class="member-info">
                     <h3>Anais Tourissaud</h3>
                     <h2>Respo Com</h2>
@@ -177,7 +232,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2019_2020/Camille.webp" alt="Camille">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2019_2020/Camille.webp" alt="Camille">
                 <div class="member-info">
                     <h3>Camille Pelletier</h3>
                     <h2>Respo Partnership</h2>
@@ -196,7 +251,7 @@ include_typing_js: false
 
         <div class="team-grid">
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2018_2019/Maxime.webp" alt="Maxime">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2018_2019/Maxime.webp" alt="Maxime">
                 <div class="member-info">
                     <h3>Maxime Luyat</h3>
                     <h2>President</h2>
@@ -205,7 +260,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2018_2019/Nicolas.webp" alt="Nicolas">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2018_2019/Nicolas.webp" alt="Nicolas">
                 <div class="member-info">
                     <h3>Nicolas Reboul</h3>
                     <h2>Treasurer</h2>
@@ -214,7 +269,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2018_2019/Arthur.webp" alt"Arthur">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2018_2019/Arthur.webp" alt="Arthur">
                 <div class="member-info">
                     <h3>Arthur Jolivet</h3>
                     <h2>Secretary</h2>
@@ -223,7 +278,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2018_2019/Anais.webp" alt="Anais">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2018_2019/Anais.webp" alt="Anais">
                 <div class="member-info">
                     <h3>Anais Tourissaud</h3>
                     <h2>Respo Com'inte</h2>
@@ -232,7 +287,7 @@ include_typing_js: false
             </div>
 
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2018_2019/Sara.webp" alt="Sara">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2018_2019/Sara.webp" alt="Sara">
                 <div class="member-info">
                     <h3>Sara Chaoufi</h3>
                     <h2>Respo Com'exte</h2>
@@ -249,8 +304,10 @@ include_typing_js: false
 
     <section class="team-section" style="margin-top: 0vh;">
 
+        <div class="team-grid">
+
             <div class="team-member">
-                <img loading="lazy"  src="./static/former_teams/2013_2014/Anthony.webp" alt="Anthony">
+                <img loading="lazy" decoding="async"  src="./static/former_teams/2013_2014/Anthony.webp" alt="Anthony">
                 <div class="member-info">
                     <h3>Anthony Gautier</h3>
                     <h2>Respo Drone</h2>
@@ -260,3 +317,67 @@ include_typing_js: false
 
         </div>
     </section>
+
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./team.html">Team</a></li>
+            <li><a href="./rocket.html">Rocket</a></li>
+            <li><a href="./drone.html">Drone</a></li>
+            <li><a href="./astronomy.html">Astronomy</a></li>
+            <li><a href="./partnership.html">Partnership</a></li>
+        </ul>
+
+        <div class="footer-logo-center">
+            <a href="./index.html">
+                <img loading="lazy" decoding="async" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo">
+            </a>
+        </div>
+
+        <ul class="social-links">
+            <li>
+                <a href="https://www.instagram.com/eirspace_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img loading="lazy" decoding="async" src="./static/social/instagram.svg" alt="Instagram Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/eirspace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img loading="lazy" decoding="async" src="./static/social/linkedin.svg" alt="LinkedIn Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/Eirspace_EMMK" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                    <img loading="lazy" decoding="async" src="./static/social/telegram.svg" alt="Telegram Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/EIRSPACE-2024" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                    <img loading="lazy" decoding="async" src="./static/social/github.svg" alt="Github Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" rel="noopener noreferrer" aria-label="Enseirb">
+                    <img loading="lazy" decoding="async" src="./static/social/enseirb.svg" alt="Enseirb Logo">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer-copyright">
+        &copy; 2024 Eirspace. All rights reserved.
+    </div>
+</footer>       
+
+<!-- Performances issue.
+<script defer src="resources/js/loading.js"></script>
+<script defer src="resources/js/shooting_stars.js"></script>
+<script defer src="resources/js/typing.js"></script>
+-->
+<script defer src="resources/js/navbar.js"></script>
+
+</body>
+</html>
+

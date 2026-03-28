@@ -1,15 +1,70 @@
----
-layout: default
-title: EIRSPACE - Rocket
-description: Pole Rocket EIRSPACE: conception, fabrication et lancement de fusees etudiantes.
-permalink: /rocket.html
-styles:
-    - resources/assets/team.css
-    - resources/assets/rocket_drone_astro.css
----
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EIRSPACE - Rocket</title>
+    <meta name="description" content="Pole fusee EIRSPACE: conception, construction et preparation au lancement C'Space.">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/logo/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="static/logo/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="static/logo/favicon-16x16.png">
+    <link rel="stylesheet" href="resources/assets/styles.css">
+    <link rel="stylesheet" href="resources/assets/components.css">
+    <link rel="stylesheet" href="resources/assets/header.css">
+    <link rel="stylesheet" href="resources/assets/sections.css">
+    <link rel="stylesheet" href="resources/assets/team.css">
+    <link rel="stylesheet" href="resources/assets/rocket_drone_astro.css">
+    <link rel="stylesheet" href="resources/assets/footer.css">
+    <link rel="stylesheet" href="resources/assets/conversion.css">
+    <link rel="stylesheet" href="resources/assets/loading.css">
+</head>
 
-<!-- CONTENT OF THE PAGE -->
-    <section class="minipage-section-zero" loading="lazy" id="minipage0">
+<body class="page-rocket">
+
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div id="loading-text">
+            <span class="letter">E</span><span class="letter">i</span><span class="letter">R</span>
+            <span class="letter">s</span><span class="letter">P</span><span class="letter">A</span>
+            <span class="letter">C</span><span class="letter">E</span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar" aria-label="Navigation principale">
+        <div class="logo-navbar"><a href="./index.html"><img loading="lazy" decoding="async" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace"></img></a></div>
+        <ul class="nav-links">
+            <li><a href="./team.html">TEAM</a></li>
+            <li><a href="./rocket.html">ROCKET</a></li>
+            <li><a href="./drone.html">DRONE</a></li>
+            <li><a href="./astronomy.html">ASTRONOMY</a></li>
+            <li><a href="./partnership.html">PARTNERSHIP</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
+        </ul>
+
+        <div class="dropdown-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu de navigation">☰</button>
+        <ul class="dropdown-links" id="primary-menu">
+            <li><a href="./team.html">TEAM</a></li>
+            <li><a href="./rocket.html">ROCKET</a></li>
+            <li><a href="./drone.html">DRONE</a></li>
+            <li><a href="./astronomy.html">ASTRONOMY</a></li>
+            <li><a href="./partnership.html">PARTNERSHIP</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://t.me/Eirspace_EMMK">TELEGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/eirspace_">INSTAGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/eirspace">LINKEDIN</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
+            <li><a href="./projects.html">PROJECTS</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="star-field"></div>
+    <div class="shooting-star-field"></div>
+
+    <!-- CONTENT OF THE PAGE -->
+    <section class="minipage-section-zero" id="minipage0">
         <div class="minipage-grid-zero">
             <div class=minipage-member>
             <div class="minipage-content-zero"> 
@@ -19,14 +74,14 @@ styles:
 
             <div class="minipage-member">
             <div class="image-container">
-                <img loading="lazy" src="./static/rocket/rocket_0.webp" alt="user">
+                <img loading="lazy" decoding="async" src="./static/rocket/rocket_0.webp" alt="user">
             </div>
             </div>
 
         </div>
     </section>
 
-    <section class="minipage-section" loading="lazy" id="minipage1">
+    <section class="minipage-section" id="minipage1">
         <div class="minipage-grid">
             <div class=minipage-member>
             <div class="minipage-content"> 
@@ -37,7 +92,7 @@ Le moment fort de cette aventure sera le lancement au C'Space, où vous pourrez 
 
             <div class="minipage-member">
             <div class="image-container">
-                <img loading="lazy" style="width: 60%;" src="./static/rocket/rocket_1.webp" alt="user">
+                <img loading="lazy" decoding="async" style="width: 60%;" src="./static/rocket/rocket_1.webp" alt="user">
                 <div class="minipage-info">
                     <h3>
                         Build your own Rocket !
@@ -49,12 +104,12 @@ Le moment fort de cette aventure sera le lancement au C'Space, où vous pourrez 
         </div>
     </section>
 
-    <section class="minipage-section" loading="lazy" id="minipage2">
+    <section class="minipage-section" id="minipage2">
         <div class="minipage-grid">
 
             <div class="minipage-member">
             <div class="image-container">
-                <video loading="lazy" style="width: 90%;" autoplay loop muted><source src="./static/rocket/rocket_2.mp4" type="video/mp4"></video>
+                <video preload="metadata" style="width: 90%;" autoplay loop muted><source src="./static/rocket/rocket_2.mp4" type="video/mp4"></video>
                 <div class="minipage-info">
                     <h3>
                         What is C'Space ?
@@ -79,3 +134,64 @@ C'Space est un événement national organisé par Planète sciences en collabora
             >> ROCKET HISTORY <<
         </a>
     </div>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./team.html">Team</a></li>
+            <li><a href="./rocket.html">Rocket</a></li>
+            <li><a href="./drone.html">Drone</a></li>
+            <li><a href="./astronomy.html">Astronomy</a></li>
+            <li><a href="./partnership.html">Partnership</a></li>
+        </ul>
+
+        <div class="footer-logo-center">
+            <a href="./index.html">
+                <img loading="lazy" decoding="async" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo">
+            </a>
+        </div>
+
+        <ul class="social-links">
+            <li>
+                <a href="https://www.instagram.com/eirspace_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img loading="lazy" decoding="async" src="./static/social/instagram.svg" alt="Instagram Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/eirspace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img loading="lazy" decoding="async" src="./static/social/linkedin.svg" alt="LinkedIn Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/Eirspace_EMMK" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                    <img loading="lazy" decoding="async" src="./static/social/telegram.svg" alt="Telegram Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/EIRSPACE-2024" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                    <img loading="lazy" decoding="async" src="./static/social/github.svg" alt="Github Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" rel="noopener noreferrer" aria-label="Enseirb">
+                    <img loading="lazy" decoding="async" src="./static/social/enseirb.svg" alt="Enseirb Logo">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer-copyright">
+        &copy; 2024 Eirspace. All rights reserved.
+    </div>
+</footer>       
+
+<script defer src="resources/js/loading.js"></script>
+<script defer src="resources/js/shooting_stars.js"></script>
+<script defer src="resources/js/navbar.js"></script>
+<script defer src="resources/js/typing.js"></script>
+
+</body>
+</html>
+

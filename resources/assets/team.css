@@ -3,67 +3,46 @@
 /* ------------------------------------------------------------------------- */
 
 .team-section {
-    margin-top: 10vh;
-    padding: 2rem;
+    margin-top: var(--space-vh-sm);
+    padding: var(--space-lg);
     text-align: center;
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-gap-sm);
     justify-items: center;
+    width: min(100%, 1280px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team-member {
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 10px;
-    transition: transform background-color 0.5s ease;
+    border: 1px solid var(--color-border);
+    transition: transform var(--duration-medium) ease, background-color var(--duration-medium) ease;
 }
 
 .team-member:hover {
     transform: translateY(-5px);
-    background-color: #151515;    /* background-color: #112240; */
+    background-color: var(--color-surface-hover);    /* background-color: #112240; */
 }
 
 .team-member img {
     z-index: 2;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .member-info h3 {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 3em;
-    transition: color 0.3s;
-}
-
-.member-info h3:hover {
-    color: #00FF41;
+    font-size: clamp(1.4rem, 1rem + 1.9vw, 3rem);
 }
 
 .member-info h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 2.5em;
-    transition: color 0.3s;
-}
-
-.member-info h2:hover {
-    color: #00FF41;
+    font-size: clamp(1.05rem, 0.8rem + 1.4vw, 2.5rem);
 }
 
 .member-info p {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 1.5em;
-}
-
-.member-info p:hover {
-    color: #00FF41;
+    font-size: clamp(0.95rem, 0.82rem + 0.7vw, 1.5rem);
 }
 
 /* ------------------------------------------------------------------------- */
@@ -72,8 +51,7 @@
 
 .team-member-juju {
     background: none;
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 10px;
+    border: 1px solid var(--color-border);
     opacity: 0;
     transition: all 5s ease 0S;
 }
@@ -84,9 +62,6 @@
 
 .team-member-juju img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .member-info-juju {
@@ -94,35 +69,15 @@
 }
 
 .member-info-juju h3 {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 3em;
-    transition: color 0.3s;
-}
-
-.member-info-juju h3:hover {
-    color: #00FF41;
+    font-size: clamp(1.4rem, 1rem + 1.9vw, 3rem);
 }
 
 .member-info-juju h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 2.5em;
-    transition: color 0.3s;
-}
-
-.member-info-juju h2:hover {
-    color: #00FF41;
+    font-size: clamp(1.05rem, 0.8rem + 1.4vw, 2.5rem);
 }
 
 .member-info-juju p {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 1.5em;
-}
-
-.member-info-juju p:hover {
-    color: #00FF41;
+    font-size: clamp(0.95rem, 0.82rem + 0.7vw, 1.5rem);
 }
 
 /* ------------------------------------------------------------------------- */
@@ -135,10 +90,7 @@
     margin-bottom: 8vh;
     background: none;
     text-transform: uppercase;
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 3em;
-    transition: color 0.3s;
+    font-size: clamp(1.3rem, 1rem + 1.8vw, 3rem);
 }
 
 .section-badge-team a {
@@ -147,17 +99,13 @@
     background: none;
 }
 
-.section-badge-team:hover {
-    color: #00FF41;
-}
-
 /* ------------------------------------------------------------------------- */
 /*                              SMALL SCREENS                                */
 /* ------------------------------------------------------------------------- */
 
 @media (max-width: 1200px) {
     .team-grid {
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 }
 
@@ -169,37 +117,90 @@
 
 @media (max-width: 500px) {
     .team-grid {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        grid-template-columns: 1fr;
     }
 
     .team-member {
-        margin-bottom: 10px;
+        margin-bottom: var(--space-stack-sm);
     }
 
     .team-member img {
-        max-width: 400px;
+        max-width: min(100%, 400px);
     }
 
     .team-member-juju img {
-        max-width: 400px;
+        max-width: min(100%, 400px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-team .team-section {
+        margin-top: 8vh;
+        padding: 1.6rem;
     }
 
-    .member-info h3 {
-        font-size: 2.5em;
+    .page-team .team-grid {
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+        gap: 20px;
     }
 
-    .member-info h2 {
-        font-size: 2em;
+    .page-team .section-badge-team {
+        margin-top: 6vh;
+        margin-bottom: 6vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-team .team-section {
+        margin-top: 7vh;
+        padding: 1.2rem;
     }
 
-    .member-info p {
+    .page-team .team-grid {
+        grid-template-columns: 1fr;
+        width: min(100%, 560px);
+        gap: 16px;
+    }
+
+    .page-team .team-member,
+    .page-team .team-member-juju {
+        width: 100%;
+    }
+
+    .page-team .section-badge-team {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 390px) {
+    .page-team .team-section {
+        margin-top: 6vh;
+        padding: 0.9rem;
+    }
+
+    .page-team .team-grid {
+        gap: 12px;
+    }
+
+    .page-team .member-info h3,
+    .page-team .member-info-juju h3 {
+        font-size: 1.35rem;
+    }
+
+    .page-team .member-info h2,
+    .page-team .member-info-juju h2 {
+        font-size: 1.05rem;
+    }
+
+    .page-team .member-info p,
+    .page-team .member-info-juju p {
+        font-size: 0.95rem;
+    }
+
+    .page-team .section-badge-team {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
         font-size: 1.5em;
-    }
-
-    .section-badge-team {
-        font-size: 1.2em;
     }
 }
 
