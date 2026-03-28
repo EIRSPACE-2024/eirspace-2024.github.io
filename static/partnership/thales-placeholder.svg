@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="Thales placeholder logo">
+  <rect width="640" height="220" fill="#0f1115"/>
+  <rect x="6" y="6" width="628" height="208" fill="none" stroke="#00FF41" stroke-width="3"/>
+  <g fill="#ffffff" font-family="Orbitron, Arial, sans-serif" text-anchor="middle">
+    <text x="320" y="105" font-size="58" letter-spacing="8">THALES</text>
+    <text x="320" y="145" font-size="20" letter-spacing="3">PLACEHOLDER LOGO</text>
+  </g>
+</svg>

@@ -1,13 +1,176 @@
----
-layout: default
-title: EIRSPACE - Partnership
-description: Partenariats EIRSPACE: entreprises, ecole et soutiens du projet associatif.
-permalink: /partnership.html
----
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EIRSPACE - Partnership</title>
+    <meta name="description" content="Partenariats EIRSPACE: collaborations, sponsors et opportunites avec l'association.">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/logo/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="static/logo/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="static/logo/favicon-16x16.png">
+    <link rel="stylesheet" href="resources/assets/styles.css">
+    <link rel="stylesheet" href="resources/assets/components.css">
+    <link rel="stylesheet" href="resources/assets/header.css">
+    <link rel="stylesheet" href="resources/assets/sections.css">
+    <link rel="stylesheet" href="resources/assets/footer.css">
+    <link rel="stylesheet" href="resources/assets/conversion.css">
+    <link rel="stylesheet" href="resources/assets/loading.css">
+    <link rel="stylesheet" href="resources/assets/partnership_video.css">
+</head>
 
-<!-- CONTENT OF THE PAGE -->
-    <section class="section-zero-coming-soon" id="section0">
-        <div class="section-content-coming-soon"> 
-            <h1 id="typing-text_0" data-text="Coming soon ..."></h1>
+<body class="page-partnership">
+
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div id="loading-text">
+            <span class="letter">E</span><span class="letter">i</span><span class="letter">R</span>
+            <span class="letter">s</span><span class="letter">P</span><span class="letter">A</span>
+            <span class="letter">C</span><span class="letter">E</span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar" aria-label="Navigation principale">
+        <div class="logo-navbar"><a href="./index.html"><img loading="lazy" decoding="async" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace"></img></a></div>
+        <ul class="nav-links">
+            <li><a href="./team.html">TEAM</a></li>
+            <li><a href="./rocket.html">ROCKET</a></li>
+            <li><a href="./drone.html">DRONE</a></li>
+            <li><a href="./astronomy.html">ASTRONOMY</a></li>
+            <li><a href="./partnership.html">PARTNERSHIP</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
+        </ul>
+
+        <div class="dropdown-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu de navigation">☰</button>
+        <ul class="dropdown-links" id="primary-menu">
+            <li><a href="./team.html">TEAM</a></li>
+            <li><a href="./rocket.html">ROCKET</a></li>
+            <li><a href="./drone.html">DRONE</a></li>
+            <li><a href="./astronomy.html">ASTRONOMY</a></li>
+            <li><a href="./partnership.html">PARTNERSHIP</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://t.me/Eirspace_EMMK">TELEGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/eirspace_">INSTAGRAM</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/eirspace">LINKEDIN</a></li>
+            <li><a href="./video.html">VIDEO</a></li>
+            <li><a href="./projects.html">PROJECTS</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="star-field"></div>
+    <div class="shooting-star-field"></div>
+
+    <!-- CONTENT OF THE PAGE -->
+    <section class="page-hero page-shell" id="section0">
+        <h1>PARTNERSHIP</h1>
+        <p>EIRSPACE construit des projets aero spatiaux avec ses partenaires.</p>
+    </section>
+
+    <!-- <section class="page-shell">
+        <p class="info-note">
+            Ajouter un partenaire: deposer un logo dans <strong>static/partnership/</strong>, puis dupliquer un bloc <strong>partner-card</strong> ci-dessous en changeant uniquement le <strong>src</strong>, le nom et le lien.
+        </p>
+    </section>
+ -->
+    <section class="partners-section page-shell">
+        <div class="partners-grid">
+            <article class="partner-card">
+                <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" rel="noopener noreferrer" aria-label="Partenaire ENSEIRB-MATMECA">
+                    <div class="partner-logo-wrap">
+                        <img class="partner-logo" loading="lazy" decoding="async" src="./static/social/enseirb.svg" alt="Logo ENSEIRB-MATMECA">
+                    </div>
+                    <div class="partner-copy">
+                        <h3>ENSEIRB-MATMECA</h3>
+                        <p>Ecole d'origine de l'association</p>
+                    </div>
+                </a>
+            </article>
+<!-- 
+            <article class="partner-card">
+                <a href="https://www.thalesgroup.com/" target="_blank" rel="noopener noreferrer" aria-label="Partenaire THALES">
+                    <div class="partner-logo-wrap">
+                        <img class="partner-logo" loading="lazy" decoding="async" src="./static/partnership/thales-placeholder.svg" alt="Logo THALES">
+                    </div>
+                    <div class="partner-copy">
+                        <h3>THALES</h3>
+                        <p>Exemple de partenaire industriel</p>
+                    </div>
+                </a>
+            </article> -->
+
+            <article class="partner-card">
+                <a href="mailto:eirspace.emmk@gmail.com" aria-label="Contacter EIRSPACE pour partenariat">
+                    <div class="partner-logo-wrap">
+                        <img class="partner-logo" loading="lazy" decoding="async" src="./static/logo/logo_eirspace_2425.webp" alt="Logo EIRSPACE">
+                    </div>
+                    <div class="partner-copy">
+                        <h3>DEVENIR PARTENAIRE</h3>
+                        <p>Contact: eirspace.emmk@gmail.com</p>
+                    </div>
+                </a>
+            </article>
         </div>
     </section>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./team.html">Team</a></li>
+            <li><a href="./rocket.html">Rocket</a></li>
+            <li><a href="./drone.html">Drone</a></li>
+            <li><a href="./astronomy.html">Astronomy</a></li>
+            <li><a href="./partnership.html">Partnership</a></li>
+        </ul>
+
+        <div class="footer-logo-center">
+            <a href="./index.html">
+                <img loading="lazy" decoding="async" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo">
+            </a>
+        </div>
+
+        <ul class="social-links">
+            <li>
+                <a href="https://www.instagram.com/eirspace_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img loading="lazy" decoding="async" src="./static/social/instagram.svg" alt="Instagram Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/eirspace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img loading="lazy" decoding="async" src="./static/social/linkedin.svg" alt="LinkedIn Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/Eirspace_EMMK" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                    <img loading="lazy" decoding="async" src="./static/social/telegram.svg" alt="Telegram Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/EIRSPACE-2024" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                    <img loading="lazy" decoding="async" src="./static/social/github.svg" alt="Github Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" rel="noopener noreferrer" aria-label="Enseirb">
+                    <img loading="lazy" decoding="async" src="./static/social/enseirb.svg" alt="Enseirb Logo">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer-copyright">
+        &copy; 2024 Eirspace. All rights reserved.
+    </div>
+</footer>       
+
+<script defer src="resources/js/loading.js"></script>
+<script defer src="resources/js/shooting_stars.js"></script>
+<script defer src="resources/js/navbar.js"></script>
+<script defer src="resources/js/typing.js"></script>
+
+</body>
+</html>
+
