@@ -4,6 +4,11 @@
 
 window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
+    if (!loadingScreen) {
+        generateStarField();
+        return;
+    }
+
     if (!sessionStorage.getItem('hasVisited')) {
         setTimeout(() => {
             loadingScreen.style.opacity = '0';
@@ -27,24 +32,20 @@ window.addEventListener('load', () => {
 
 document.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', (event) => {
-        if (link.getAttribute('href') !== '#') {
-            event.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-                window.location = link.getAttribute('href');
-            }, 300);
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || link.target === '_blank') {
+            return;
         }
-    });
-});
 
-/* GO BACK LOADING. */
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', (event) => {
-        if (link.getAttribute('href') !== '#') {
+        if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
+            return;
+        }
+
+        if (!href.startsWith('#')) {
             event.preventDefault();
             document.body.classList.add('fade-out');
             setTimeout(() => {
-                window.location = link.getAttribute('href');
+                window.location = href;
             }, 300);
         }
     });
@@ -56,6 +57,10 @@ document.querySelectorAll('a').forEach(link => {
 
 function generateStarField() {
     const starField = document.querySelector('.star-field');
+    if (!starField) {
+        return;
+    }
+
     const starDensity = 1 / 10000;
     const pageWidth = window.innerWidth;
     const pageHeight = document.body.scrollHeight;
@@ -103,7 +108,6 @@ function generateStarField() {
             }
         } else if (currentStars > numStarsNeeded) {
             for (let i = 0; i < currentStars - numStarsNeeded; i++) {
-                const starField = document.querySelector('.star-field');
                 starField.removeChild(starField.lastChild);
             }
         }
