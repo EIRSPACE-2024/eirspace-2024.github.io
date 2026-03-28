@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% include head-meta.html %}
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+    {% if page.loading_screen != false %}
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div id="loading-text">
+            <span class="letter">E</span><span class="letter">i</span><span class="letter">R</span>
+            <span class="letter">s</span><span class="letter">P</span><span class="letter">A</span>
+            <span class="letter">C</span><span class="letter">E</span>
+        </div>
+    </div>
+    {% endif %}
+
+    <header role="banner">
+        <!-- NAVBAR -->
+        {% include navbar.html %}
+    </header>
+
+    {% if page.star_field != false %}
+    <div class="star-field"></div>
+    <div class="shooting-star-field"></div>
+    {% endif %}
+
+    <main id="main-content" role="main">
+        <!-- CONTENT -->
+        {{ content }}
+    </main>
+
+    <!-- FOOTER -->
+    {% include footer.html %}
+
+    {% include scripts.html %}
+
+</body>
+</html>

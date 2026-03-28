@@ -23,7 +23,7 @@
 
 .team-member:hover {
     transform: translateY(-5px);
-    background-color: 151515;    /* background-color: #112240; */
+    background-color: #151515;    /* background-color: #112240; */
 }
 
 .team-member img {
@@ -187,15 +187,15 @@
     }
 
     .member-info h3 {
-        font-size: 2.5;
+        font-size: 2.5em;
     }
 
     .member-info h2 {
-        font-size: 2;
+        font-size: 2em;
     }
 
     .member-info p {
-        font-size: 1.5;
+        font-size: 1.5em;
     }
 
     .section-badge-team {

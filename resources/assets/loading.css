@@ -80,6 +80,7 @@ body.fade-out {
     font-size: 4em;
     letter-spacing: 7vw;
 }
+}
 
 @media (max-width: 768px) {
     #loading-text {
