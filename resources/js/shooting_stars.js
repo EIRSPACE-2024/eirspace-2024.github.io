@@ -5,6 +5,9 @@
 
 function createShootingStar() {
     const starContainer = document.querySelector('.shooting-star-field');
+    if (!starContainer) {
+        return;
+    }
 
     const star = document.createElement('div');
     star.classList.add('shooting-star');
@@ -18,11 +21,17 @@ function createShootingStar() {
     starContainer.appendChild(star);
 
     setTimeout(() => {
-        starContainer.removeChild(star);
+        if (star.parentNode === starContainer) {
+            starContainer.removeChild(star);
+        }
     }, 2000); // CSS Animation stops after 2s.
 }
 
-setInterval(createShootingStar, 6000);
+const shootingStarTimer = setInterval(createShootingStar, 6000);
+
+window.addEventListener('pagehide', () => {
+    clearInterval(shootingStarTimer);
+});
 
 /* ------------------------------------------------------------------------- */
 

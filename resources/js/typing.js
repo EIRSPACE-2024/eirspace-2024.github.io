@@ -1,52 +1,124 @@
 /* ------------------------------------------------------------------------- */
-/*                              TO TYPE A TEXT                               */
+/*                     TYPE TEXT WHEN ELEMENT ENTERS VIEWPORT                */
 /* ------------------------------------------------------------------------- */
 
-function typeEffect(element, text, speed) {
-    let i = 0;
+(function () {
+    const DEFAULT_TYPING_SPEED = 40;
+    const TYPING_SELECTOR = '[id^="typing-text_"]';
+    const typedElements = new WeakSet();
 
-    function type() {
-        if (i < text.length) {
-            if (text.charAt(i) == '<') {
-                // EOL.
-                element.innerHTML += '<BR>';
-                i += 4;
-            } else {
-                element.innerHTML += text.charAt(i);
-                i++;
-            }
-
-            setTimeout(() => {
-                setTimeout(type, speed);
-            }, speed / 2);
+    function normalizeText(rawText) {
+        if (typeof rawText !== 'string') {
+            return '';
         }
+
+        return rawText
+            .replace(/<CR>/gi, '\n')
+            .replace(/<BR>/gi, '\n');
     }
 
-    type();
-}
+    function typeEffect(element, text, speed) {
+        const chars = text.split('');
+        let index = 0;
+        let currentTextNode = document.createTextNode('');
 
-/* ------------------------------------------------------------------------- */
-/*                              ON THE WEB PAGE                              */
-/* ------------------------------------------------------------------------- */
+        element.textContent = '';
+        element.appendChild(currentTextNode);
 
+        function typeNext() {
+            if (index >= chars.length) {
+                return;
+            }
 
-function typeWebPage(typingTextId, typingSpeed) {
-    const targetElement = document.getElementById(typingTextId);
-    const text = targetElement.getAttribute("data-text")
+            const char = chars[index];
+            index += 1;
 
-    typeEffect(targetElement, text, typingSpeed);
-}
+            if (char === '\n') {
+                element.appendChild(document.createElement('br'));
+                currentTextNode = document.createTextNode('');
+                element.appendChild(currentTextNode);
+            } else {
+                currentTextNode.textContent += char;
+            }
 
-/* ------------------------------------------------------------------------- */
+            window.setTimeout(typeNext, speed);
+        }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const typingElements = document.querySelectorAll('[id^="typing-text_"]');
-    typingElements.forEach((el, index) => {
-        setTimeout(() => {
-            typeWebPage(el.id, 40);
-        }, index * 3000);  // Delay each by 3s
+        typeNext();
+    }
+
+    function typeElementOnce(element, speed) {
+        if (!element || typedElements.has(element)) {
+            return;
+        }
+
+        typedElements.add(element);
+        const sourceText = normalizeText(element.getAttribute('data-text'));
+        typeEffect(element, sourceText, speed);
+    }
+
+    function isVisibleInViewport(element) {
+        const rect = element.getBoundingClientRect();
+
+        return (
+            rect.bottom > 0 &&
+            rect.right > 0 &&
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.left < (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function typeVisibleElements(elements, speed) {
+        elements.forEach((element) => {
+            if (isVisibleInViewport(element)) {
+                typeElementOnce(element, speed);
+            }
+        });
+    }
+
+    function setupTypingObserver(elements, speed) {
+        if (!('IntersectionObserver' in window)) {
+            elements.forEach((element) => {
+                typeElementOnce(element, speed);
+            });
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries, io) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                    typeElementOnce(entry.target, speed);
+                    io.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.01
+        });
+
+        elements.forEach((element) => {
+            if (!typedElements.has(element)) {
+                observer.observe(element);
+            }
+        });
+
+        typeVisibleElements(elements, speed);
+
+        const checkAfterJump = function () {
+            typeVisibleElements(elements, speed);
+        };
+
+        window.addEventListener('load', checkAfterJump);
+        window.addEventListener('hashchange', checkAfterJump);
+
+        window.setTimeout(checkAfterJump, 0);
+        window.requestAnimationFrame(checkAfterJump);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const typingElements = Array.from(document.querySelectorAll(TYPING_SELECTOR));
+        setupTypingObserver(typingElements, DEFAULT_TYPING_SPEED);
     });
-});
+})();
 
 /* ------------------------------------------------------------------------- */
 
