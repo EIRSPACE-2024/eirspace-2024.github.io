@@ -10,23 +10,11 @@
     scrollbar-width: none; /* Hide scrollbar. */
 }
 
-:root {
-    --eirspace-neon: #00FF41;
-    --eirspace-text: #ffffff;
-    --eirspace-surface: #151515;
-    --eirspace-bg: #000000;
-}
-
 body {
-    color: var(--eirspace-neon);
+    color: #00FF41;
     font-family: 'VT323', monospace; /* retro */
     /* font-family: 'Courier New', Courier, monospace; /* alien */
-    background-color: var(--eirspace-bg); /* background-color: #0A1A2F; */
-    background-image:
-        radial-gradient(circle at 15% 20%, rgba(0, 255, 65, 0.09), transparent 45%),
-        radial-gradient(circle at 85% 70%, rgba(0, 255, 65, 0.06), transparent 42%);
-    line-height: 1.35;
-    min-height: 100vh;
+    background-color: black; /* background-color: #0A1A2F; */
 }
 
 a {
@@ -84,15 +72,6 @@ li {
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
 }
 
 /* ------------------------------------------------------------------------- */

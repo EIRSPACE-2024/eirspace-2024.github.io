@@ -10,29 +10,10 @@
     width: 100%;
     height: 10vh;
     background-color: rgba(0, 0, 0, 0.80);
-    backdrop-filter: blur(6px);
     color: white;
     display: flex;
     transition: transform 1s ease;
     z-index: 200;
-}
-
-.skip-link {
-    position: absolute;
-    left: 10px;
-    top: -80px;
-    z-index: 1001;
-    background: #00FF41;
-    color: black;
-    padding: 8px 12px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.9rem;
-    border-radius: 4px;
-    transition: top 0.2s ease;
-}
-
-.skip-link:focus {
-    top: 10px;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -101,15 +82,6 @@
     transform: translateX(-50%) scaleX(1);
 }
 
-.nav-links a:focus-visible,
-.dropdown-links li a:focus-visible,
-.menu-toggle:focus-visible,
-.footer-links a:focus-visible,
-.social-links a:focus-visible {
-    outline: 2px solid #00FF41;
-    outline-offset: 3px;
-}
-
 /* ------------------------------------------------------------------------- */
 /*                              DROPDOWN MENU                                */
 /* ------------------------------------------------------------------------- */
@@ -126,12 +98,6 @@
     border: none;
     cursor: pointer;
     margin-top: 1.5vh;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.menu-toggle:hover {
-    color: #00FF41;
-    transform: scale(1.02);
 }
 
 /* ------------------------------------------------------------------------- */

@@ -19,13 +19,10 @@
 
 .minipage-member {
     z-index: 100;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
-    animation: minipageReveal 0.7s ease both;
+    transition: background-color 0.8s ease;
 }
 
 .minipage-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 255, 65, 0.12);
     background-color: #151515;    /* background-color: #112240; */
 }
 
@@ -113,21 +110,6 @@
     justify-items: center;
     margin-left: auto;
     margin-right: auto;
-}
-
-.minipage-grid .minipage-member:nth-child(2) {
-    animation-delay: 0.08s;
-}
-
-@keyframes minipageReveal {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* ------------------------------------------------------------------------- */
