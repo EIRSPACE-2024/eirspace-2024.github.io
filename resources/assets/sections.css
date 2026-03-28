@@ -3,54 +3,38 @@
 /* ------------------------------------------------------------------------- */
 
 .section {
-    margin-top: 10vh;
-    padding: 2rem;
+    margin-top: var(--space-vh-sm);
+    padding: var(--space-lg);
     text-align: center;
 }
 
 .section-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-gap-lg);
     justify-items: center;
     margin-left: auto;
     margin-right: auto;
+    width: min(100%, 1280px);
 }
 
 .section-member {
     z-index: 100;
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 10px;
-    transition: background-color 0.8s ease;
+    border: 1px solid var(--color-border);
+    transition: background-color var(--duration-slow) ease;
 }
 
 .section-member:hover {
-    background-color: #151515;    /* background-color: #112240; */
+    background-color: var(--color-surface-hover);    /* background-color: #112240; */
 }
 
 .section-member img {
     z-index: 100;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 1);
-}
-
-.section-info {
-    background: none;
-    margin-top: 1vh;
-    margin-bottom: 1.5vh;
 }
 
 .section-info h3 {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    font-size: 3em;
-    transition: color 0.3s;
-}
-
-.section-info h3:hover {
-    color: #00FF41;
+    font-size: clamp(1.4rem, 1rem + 1.9vw, 3rem);
 }
 
 /* ------------------------------------------------------------------------- */
@@ -66,16 +50,79 @@
 }
 
 .section-content h1 {
-    font-size: 2em;
+    font-size: clamp(1.1rem, 0.9rem + 1.2vw, 2rem);
 }
 
 .section-grid-first {
     display: flex;
-    max-width: 42vw;
+    max-width: min(42vw, 680px);
     justify-items: center;
     margin-left: auto;
     margin-right: auto;
 
+}
+
+.page-index .section-intro {
+    margin-top: -5vh;
+    text-align: left;
+}
+
+.page-index .section-cards {
+    margin-bottom: 20vh;
+}
+
+.page-index .section-grid-first {
+    max-width: min(84vw, 980px);
+}
+
+.page-index .section-grid {
+    grid-template-columns: repeat(2, minmax(420px, 1fr));
+    width: min(100%, 1200px);
+    gap: 32px;
+}
+
+.page-index .section-member {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.08) 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: transform var(--duration-medium) ease, box-shadow var(--duration-medium) ease, background-color var(--duration-medium) ease;
+}
+
+.page-index .section-member:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.page-index .section-member img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.page-index .section-info {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 14px 10px 16px;
+}
+
+.page-index .section-info h3 {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    font-size: clamp(1.3rem, 1rem + 1.2vw, 2.1rem);
+}
+
+.page-team .team-hero {
+    margin-top: 20vh;
+    text-align: left;
+}
+
+.page-team .team-hero-content {
+    font-size: 1.5em;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -104,7 +151,8 @@
 
 @media (max-width: 1200px) {
     .section-grid {
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-gap-sm);
     }
 
     .section-grid-first {
@@ -118,22 +166,20 @@
 
 @media (max-width: 500px) {
     .section {
-        margin-top: 22vh;
+        margin-top: calc(var(--space-vh-md) + 2vh);
     }
 
     .section-grid {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        grid-template-columns: 1fr;
     }
 
 
     .section-member {
-        margin-bottom: 30px;
+        margin-bottom: var(--space-stack-md);
     }
 
     .section-member img {
-        max-width: 400px;
+        max-width: min(100%, 400px);
     }
 
     .section-info h3 {
@@ -146,6 +192,133 @@
 
     .section-content h1 {
         font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-index .section {
+        margin-top: 8vh;
+        padding: 1.6rem;
+    }
+
+    .page-index .section-intro {
+        margin-top: 2vh;
+    }
+
+    .page-index .section-cards {
+        margin-bottom: 14vh;
+    }
+
+    .page-index .section-grid {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 22px;
+    }
+
+    .page-index .section-grid-first {
+        max-width: min(92vw, 900px);
+    }
+
+    .page-index .section-info h3 {
+        font-size: clamp(1.2rem, 0.9rem + 1vw, 1.8rem);
+    }
+
+    .page-team .team-hero {
+        margin-top: 15vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-index .section {
+        margin-top: 7vh;
+        padding: 1.2rem;
+    }
+
+    .page-index .section-intro {
+        margin-top: 4vh;
+        text-align: center;
+    }
+
+    .page-index .section-content {
+        position: static;
+        left: auto;
+        max-width: 92vw;
+        margin: 0 auto;
+    }
+
+    .page-index .section-grid-first {
+        max-width: min(92vw, 620px);
+    }
+
+    .page-index .section-grid {
+        grid-template-columns: 1fr;
+        width: min(100%, 620px);
+    }
+
+    .page-index .section-cards {
+        margin-bottom: 10vh;
+    }
+
+    .page-index .section-info {
+        padding: 12px 8px 14px;
+    }
+
+    .page-index .section-info h3 {
+        font-size: 1.45rem;
+        letter-spacing: 0.05em;
+    }
+
+    .page-team .team-hero {
+        margin-top: 13vh;
+        text-align: center;
+    }
+
+    .page-team .team-hero-content {
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 390px) {
+    .page-index .section {
+        margin-top: 6vh;
+        padding: 0.9rem;
+    }
+
+    .page-index .section-intro {
+        margin-top: 5vh;
+    }
+
+    .page-index .section-content h1 {
+        font-size: 1.05rem;
+        line-height: 1.25;
+    }
+
+    .page-index .section-grid {
+        gap: 14px;
+    }
+
+    .page-index .section-member img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .page-index .section-info {
+        padding: 10px 6px 12px;
+    }
+
+    .page-index .section-info h3 {
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+    }
+
+    .page-index .section-cards {
+        margin-bottom: 8vh;
+    }
+
+    .page-team .team-hero {
+        margin-top: 12vh;
+    }
+
+    .page-team .team-hero-content {
+        font-size: 1.1em;
     }
 }
 

@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------------------- */
+/*                      SHARED COMPONENT STYLES                              */
+/* ------------------------------------------------------------------------- */
+
+.section-member,
+.team-member,
+.team-member-juju,
+.minipage-member {
+    border-radius: var(--radius-card);
+}
+
+.section-member img,
+.team-member img,
+.team-member-juju img,
+.minipage-member img {
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    height: auto;
+}
+
+.section-info,
+.minipage-info {
+    background: none;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+}
+
+.section-info h3,
+.member-info h3,
+.member-info-juju h3,
+.section-badge-team,
+.minipage-info h3 {
+    font-family: var(--font-display);
+    color: var(--color-text);
+    transition: color var(--duration-fast);
+}
+
+.section-info h3:hover,
+.member-info h3:hover,
+.member-info-juju h3:hover,
+.section-badge-team:hover,
+.minipage-info h3:hover {
+    color: var(--color-accent);
+}
+
+.member-info h2,
+.member-info-juju h2,
+.member-info p,
+.member-info-juju p,
+.minipage-content {
+    font-family: var(--font-display);
+    color: var(--color-text);
+    transition: color var(--duration-fast);
+}
+
+.member-info h2:hover,
+.member-info-juju h2:hover,
+.member-info p:hover,
+.member-info-juju p:hover,
+.minipage-content:hover {
+    color: var(--color-accent);
+}
+
+/* ------------------------------------------------------------------------- */

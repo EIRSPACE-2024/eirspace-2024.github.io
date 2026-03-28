@@ -2,6 +2,53 @@
 /*          MAIN CSS FILE - FONT, SIZE, BODY, PARTICULAR STYLE ETC..         */
 /* ------------------------------------------------------------------------- */
 
+@font-face {
+    font-family: 'VT323';
+    src: url('../../static/fonts/vt323-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../../static/fonts/orbitron-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-accent: #00FF41;
+    --color-text: #ffffff;
+    --color-bg: #000000;
+    --color-surface-hover: #151515;
+    --color-border: rgba(255, 255, 255, 1);
+    --color-divider: #333333;
+
+    --font-body: 'VT323', 'Courier New', Courier, monospace;
+    --font-display: 'Orbitron', sans-serif;
+
+    --duration-fast: 0.3s;
+    --duration-medium: 0.5s;
+    --duration-slow: 0.8s;
+    --duration-navbar: 1s;
+
+    --radius-card: 10px;
+    --space-xxs: 0.2rem;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-gap-sm: 20px;
+    --space-gap-lg: 40px;
+    --space-stack-sm: 10px;
+    --space-stack-md: 30px;
+
+    --space-vh-sm: 10vh;
+    --space-vh-md: 20vh;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +58,11 @@
 }
 
 body {
-    color: #00FF41;
-    font-family: 'VT323', monospace; /* retro */
+    color: var(--color-accent);
+    font-family: var(--font-body); /* retro */
     /* font-family: 'Courier New', Courier, monospace; /* alien */
-    background-color: black; /* background-color: #0A1A2F; */
+    background-color: var(--color-bg); /* background-color: #0A1A2F; */
+    overflow-x: hidden;
 }
 
 a {
@@ -22,9 +70,15 @@ a {
     background: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
 h1 {
     font-size: 2em;
-    margin-bottom: 10px;
+    margin-bottom: var(--space-stack-sm);
     background: none;
 }
 
@@ -39,6 +93,7 @@ li {
     background: none;
     max-width: 1000px;
     max-height: 1000px;
+    width: 100%;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -56,21 +111,16 @@ li {
     z-index: -1;
     position: absolute;
     border-radius: 50%;
-    background: white;
+    background: var(--color-text);
     opacity: 0;
 }
 
 .twinkling {
-    animation: twinkling 4s infinite alternate, fade-in 2s ease-in;
+    animation: twinkling 4s infinite alternate;
 }
 
 @keyframes twinkling {
     0% { opacity: 0.1; }
-    100% { opacity: 1; }
-}
-
-@keyframes fade-in {
-    0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
@@ -93,7 +143,7 @@ li {
     position: absolute;
     width: 4px;
     height: 4px;
-    background: white;
+    background: var(--color-text);
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     opacity: 1;
@@ -110,6 +160,17 @@ li {
         z-index: -1;
         transform: translate(50vw, 50vh) scale(2);
         opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
