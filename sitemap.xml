@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://eirspace-2024.github.io/</loc><priority>1.0</priority></url>
   <url><loc>https://eirspace-2024.github.io/team.html</loc><priority>0.9</priority></url>
+  <url><loc>https://eirspace-2024.github.io/former_teams.html</loc><priority>0.7</priority></url>
   <url><loc>https://eirspace-2024.github.io/rocket.html</loc><priority>0.8</priority></url>
+  <url><loc>https://eirspace-2024.github.io/rocket_history.html</loc><priority>0.7</priority></url>
   <url><loc>https://eirspace-2024.github.io/drone.html</loc><priority>0.8</priority></url>
   <url><loc>https://eirspace-2024.github.io/astronomy.html</loc><priority>0.8</priority></url>
+  <url><loc>https://eirspace-2024.github.io/astronomy_pictures.html</loc><priority>0.7</priority></url>
   <url><loc>https://eirspace-2024.github.io/partnership.html</loc><priority>0.7</priority></url>
   <url><loc>https://eirspace-2024.github.io/projects.html</loc><priority>0.7</priority></url>
   <url><loc>https://eirspace-2024.github.io/video.html</loc><priority>0.6</priority></url>
-  <url><loc>https://eirspace-2024.github.io/rocket_history.html</loc><priority>0.6</priority></url>
-  <url><loc>https://eirspace-2024.github.io/former_teams.html</loc><priority>0.6</priority></url>
-  <url><loc>https://eirspace-2024.github.io/astronomy_pictures.html</loc><priority>0.6</priority></url>
 </urlset>
