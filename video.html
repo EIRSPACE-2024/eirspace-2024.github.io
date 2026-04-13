@@ -6,20 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EIRSPACE - Video</title>
     <meta name="description" content="Videos EIRSPACE: presentations de l'association, projets et temps forts.">
+    <link rel="preload" href="static/fonts/vt323-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="static/fonts/orbitron-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="canonical" href="https://eirspace-2024.github.io/video.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EIRSPACE">
+    <meta property="og:title" content="EIRSPACE — Association Aérospatiale ENSEIRB-MATMECA">
+    <meta property="og:description" content="Fusée, drone, astronomie — l'association aérospatiale de Bordeaux.">
+    <meta property="og:image" content="https://eirspace-2024.github.io/static/logo/logo_eirspace_2425.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://eirspace-2024.github.io/video.html">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EIRSPACE — Association Aérospatiale ENSEIRB-MATMECA">
+    <meta name="twitter:description" content="Fusée, drone, astronomie — l'association aérospatiale de Bordeaux.">
+    <meta name="twitter:image" content="https://eirspace-2024.github.io/static/logo/logo_eirspace_2425.webp">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#000000">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://eirspace-2024.github.io/#organization",
+          "name": "EIRSPACE",
+          "url": "https://eirspace-2024.github.io/",
+          "logo": "https://eirspace-2024.github.io/static/logo/logo_eirspace_2425.webp",
+          "sameAs": [
+            "https://www.instagram.com/eirspace_",
+            "https://www.linkedin.com/company/eirspace",
+            "https://github.com/EIRSPACE-2024"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://eirspace-2024.github.io/#website",
+          "url": "https://eirspace-2024.github.io/",
+          "name": "EIRSPACE",
+          "publisher": { "@id": "https://eirspace-2024.github.io/#organization" }
+        }
+      ]
+    }
+    </script>
 	<link rel="apple-touch-icon" sizes="180x180" href="static/logo/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="static/logo/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="static/logo/favicon-16x16.png">
-    <link rel="stylesheet" href="resources/assets/styles.css">
-    <link rel="stylesheet" href="resources/assets/components.css">
-    <link rel="stylesheet" href="resources/assets/header.css">
-    <link rel="stylesheet" href="resources/assets/sections.css">
-    <link rel="stylesheet" href="resources/assets/footer.css">
-    <link rel="stylesheet" href="resources/assets/conversion.css">
-    <link rel="stylesheet" href="resources/assets/loading.css">
-    <link rel="stylesheet" href="resources/assets/partnership_video.css">
+    <link rel="stylesheet" href="resources/assets/bundle.min.css">
 </head>
 
 <body class="page-video">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <!-- LOADING SCREEN -->
     <div id="loading-screen">
@@ -32,8 +70,9 @@
 
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar" aria-label="Navigation principale">
-        <div class="logo-navbar"><a href="./index.html"><img loading="lazy" decoding="async" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace"></img></a></div>
+        <div class="logo-navbar"><a href="./index.html"><img loading="eager" decoding="async" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace" width="526" height="70" fetchpriority="high"></img></a></div>
         <ul class="nav-links">
+            <li><a href="./index.html">HOME</a></li>
             <li><a href="./team.html">TEAM</a></li>
             <li><a href="./rocket.html">ROCKET</a></li>
             <li><a href="./drone.html">DRONE</a></li>
@@ -45,6 +84,7 @@
         <div class="dropdown-menu">
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu de navigation">☰</button>
         <ul class="dropdown-links" id="primary-menu">
+            <li><a href="./index.html">HOME</a></li>
             <li><a href="./team.html">TEAM</a></li>
             <li><a href="./rocket.html">ROCKET</a></li>
             <li><a href="./drone.html">DRONE</a></li>
@@ -58,6 +98,8 @@
         </ul>
         </div>
     </nav>
+
+    <main id="main-content">
 
     <div class="star-field"></div>
     <div class="shooting-star-field"></div>
@@ -85,6 +127,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- FOOTER -->
 <footer class="footer">
     <div class="footer-content">
@@ -99,41 +143,41 @@
 
         <div class="footer-logo-center">
             <a href="./index.html">
-                <img loading="lazy" decoding="async" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo">
+                <img loading="lazy" decoding="async" src="./static/logo/logo_eirspace_2425.webp" alt="Eirspace Logo" width="580" height="582">
             </a>
         </div>
 
         <ul class="social-links">
             <li>
                 <a href="https://www.instagram.com/eirspace_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <img loading="lazy" decoding="async" src="./static/social/instagram.svg" alt="Instagram Logo">
+                    <img loading="lazy" decoding="async" src="./static/social/instagram.svg" alt="Instagram Logo" width="16" height="16">
                 </a>
             </li>
             <li>
                 <a href="https://www.linkedin.com/company/eirspace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <img loading="lazy" decoding="async" src="./static/social/linkedin.svg" alt="LinkedIn Logo">
+                    <img loading="lazy" decoding="async" src="./static/social/linkedin.svg" alt="LinkedIn Logo" width="16" height="16">
                 </a>
             </li>
             <li>
                 <a href="https://t.me/Eirspace_EMMK" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-                    <img loading="lazy" decoding="async" src="./static/social/telegram.svg" alt="Telegram Logo">
+                    <img loading="lazy" decoding="async" src="./static/social/telegram.svg" alt="Telegram Logo" width="16" height="16">
                 </a>
             </li>
             <li>
                 <a href="https://github.com/EIRSPACE-2024" target="_blank" rel="noopener noreferrer" aria-label="Github">
-                    <img loading="lazy" decoding="async" src="./static/social/github.svg" alt="Github Logo">
+                    <img loading="lazy" decoding="async" src="./static/social/github.svg" alt="Github Logo" width="16" height="16">
                 </a>
             </li>
             <li>
                 <a href="https://enseirb-matmeca.bordeaux-inp.fr/fr" target="_blank" rel="noopener noreferrer" aria-label="Enseirb">
-                    <img loading="lazy" decoding="async" src="./static/social/enseirb.svg" alt="Enseirb Logo">
+                    <img loading="lazy" decoding="async" src="./static/social/enseirb.svg" alt="Enseirb Logo" width="64" height="64">
                 </a>
             </li>
         </ul>
     </div>
 
     <div class="footer-copyright">
-        &copy; 2024 Eirspace. All rights reserved.
+        &copy; <span class="footer-year">2024</span> Eirspace. All rights reserved.
     </div>
 </footer>       
 

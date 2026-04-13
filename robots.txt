@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /resources/
+Sitemap: https://eirspace-2024.github.io/sitemap.xml
