@@ -179,7 +179,7 @@ function updateAriaVisibility() {
 
 function updateFooterYear() {
     const year = String(new Date().getFullYear());
-    const yearNodes = document.querySelectorAll('.footer-year');
+    const yearNodes = document.querySelectorAll('#footer-year');
     yearNodes.forEach((node) => {
         node.textContent = year;
     });
