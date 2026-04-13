@@ -6,6 +6,7 @@
     font-family: 'Tele Marines';
     src: url('../../static/fonts/telemarines3d1.ttf') format('truetype');
     font-style: normal;
+    font-display: swap;
 }
 
 /* ------------------------------------------------------------------------- */

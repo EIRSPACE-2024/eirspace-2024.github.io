@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EIRSPACE - Home</title>
-    <meta name="description" content="EIRSPACE, association aerospatiale de l'ENSEIRB-MATMECA: equipe, projets fusee, drone et astronomie.">
+    <meta name="description" content="EIRSPACE est l'association aérospatiale de l'ENSEIRB-MATMECA à Bordeaux. Projets fusée, drone et astronomie réalisés par des étudiants ingénieurs passionnés par l'espace.">
     <link rel="preload" href="static/fonts/vt323-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="static/fonts/orbitron-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="static/fonts/telemarines3d1.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="canonical" href="https://eirspace-2024.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="EIRSPACE">
@@ -36,7 +37,7 @@
           "logo": "https://eirspace-2024.github.io/static/logo/logo_eirspace_2425.webp",
           "sameAs": [
             "https://www.instagram.com/eirspace_",
-            "https://www.linkedin.com/company/eirspace",
+            "https://www.linkedin.com/company/eirspace-em",
             "https://github.com/EIRSPACE-2024"
           ]
         },
@@ -67,10 +68,29 @@
             <span class="letter">C</span><span class="letter">E</span>
         </div>
     </div>
+    <script>
+        (function() {
+            var ls = document.getElementById("loading-screen");
+            if (!sessionStorage.getItem("eirspace-first-visit")) {
+                sessionStorage.setItem("eirspace-first-visit", "true");
+                ls.style.display = "flex";
+                window.eirspaceLoadingPlaying = true; // Tell loading.js to wait
+                setTimeout(function() {
+                    ls.classList.add("hidden");
+                    setTimeout(function() { 
+                        ls.style.display = "none"; 
+                        window.eirspaceLoadingPlaying = false;
+                        // Dispatch an event to init the rest of the page animations
+                        window.dispatchEvent(new Event('eirspace-loading-done'));
+                    }, 1000);
+                }, 3600);
+            }
+        })();
+    </script>
 
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar" aria-label="Navigation principale">
-        <div class="logo-navbar"><a href="./index.html"><img loading="eager" decoding="async" src="static/fonts/eirspace_navbar_logo.png" alt="Eirspace" width="526" height="70" fetchpriority="high"></img></a></div>
+        <div class="logo-navbar"><a href="./index.html"><img loading="eager" decoding="async" src="static/logo/eirspace_navbar_logo.png" alt="Eirspace" width="526" height="70" fetchpriority="high"></img></a></div>
         <ul class="nav-links">
             <li><a href="./index.html">HOME</a></li>
             <li><a href="./team.html">TEAM</a></li>
@@ -92,7 +112,7 @@
             <li><a href="./partnership.html">PARTNERSHIP</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://t.me/Eirspace_EMMK">TELEGRAM</a></li>
             <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/eirspace_">INSTAGRAM</a></li>
-            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/eirspace">LINKEDIN</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/eirspace-em">LINKEDIN</a></li>
             <li><a href="./video.html">VIDEO</a></li>
             <li><a href="./projects.html">PROJECTS</a></li>
         </ul>
@@ -111,7 +131,7 @@
         <div class="section-grid-first">
             <div class="section-member">
                 <a href="./team.html">
-                    <img loading="eager" fetchpriority="high" decoding="async" src="./static/index/index_team.webp" alt="Team" width="1600" height="1000">
+                    <img loading="eager" fetchpriority="high" decoding="async" src="./static/index/index_team.webp" alt="L'équipe EIRSPACE 2024-2025 — étudiants ingénieurs de l'ENSEIRB-MATMECA" width="1600" height="1000">
                     <div class="section-info">
                         <h3>>> TEAM <<</h3>
                     </div>
@@ -131,7 +151,7 @@
         <div class="section-grid">
             <div class="section-member">
                 <a href="./rocket.html">
-                    <img loading="lazy" decoding="async" src="./static/index/index_rocket.webp" alt="Rocket" width="1280" height="720">
+                    <img loading="lazy" decoding="async" src="./static/index/index_rocket.webp" alt="Fusée EIRSPACE — projet Spaceshot en préparation au lancement" width="1280" height="720">
                     <div class="section-info">
                         <h3>>> ROCKET <<</h3>
                     </div>
@@ -140,7 +160,7 @@
 
             <div class="section-member">
                 <a href="./drone.html">
-                    <img loading="lazy" decoding="async" src="./static/index/index_drone.webp" alt="Drone" width="6000" height="3368">
+                    <img loading="lazy" decoding="async" src="./static/index/index_drone.webp" alt="Drone EIRSPACE en vol lors d'une session de test à Bordeaux" width="1296" height="864">
                     <div class="section-info">
                         <h3>>> DRONE <<</h3>
                     </div>
@@ -149,7 +169,7 @@
 
             <div class="section-member">
                 <a href="./astronomy.html">
-                    <img loading="lazy" decoding="async" src="./static/index/index_astronomy.webp" alt="Astronomy" width="1256" height="974">
+                    <img loading="lazy" decoding="async" src="./static/index/index_astronomy.webp" alt="Observation astronomique nocturne par les membres d'EIRSPACE" width="1280" height="720">
                     <div class="section-info">
                         <h3>>> ASTRONOMY <<</h3>
                     </div>
@@ -158,7 +178,7 @@
 
             <div class="section-member">
                 <a href="./projects.html">
-                    <img loading="lazy" decoding="async" src="./static/index/index_projects.webp" alt="Projects" width="1120" height="843">
+                    <img loading="lazy" decoding="async" src="./static/index/index_projects.webp" alt="Projets aérospatiaux EIRSPACE — prototypes et réalisations de l'année" width="1120" height="843">
                     <div class="section-info">
                         <h3>>> PROJECTS <<</h3>
                     </div>
@@ -195,7 +215,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/company/eirspace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/eirspace-em" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <img loading="lazy" decoding="async" src="./static/social/linkedin.svg" alt="LinkedIn Logo" width="16" height="16">
                 </a>
             </li>
@@ -218,7 +238,7 @@
     </div>
 
     <div class="footer-copyright">
-        &copy; <span class="footer-year">2024</span> Eirspace. All rights reserved.
+        &copy; <span id="footer-year">2024</span> Eirspace. All rights reserved.
     </div>
 </footer>       
 
