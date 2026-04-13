@@ -18,15 +18,6 @@ if command -v npx >/dev/null 2>&1; then
   npx --yes clean-css-cli resources/assets/bundle.css -o resources/assets/bundle.min.css
   echo "Generated resources/assets/bundle.min.css"
 else
-  # Using python for minification fallback
-  python3 -c "
-import sys, re
-with open('resources/assets/bundle.css', 'r') as f: css = f.read()
-css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)
-css = re.sub(r'\s+', ' ', css)
-css = re.sub(r'\s*([\{\}\:\;\,\>])\s*', r'\1', css)
-css = re.sub(r';}', '}', css)
-with open('resources/assets/bundle.min.css', 'w') as f: f.write(css.strip())
-"
-  echo "npx unavailable, created minified bundle.min.css via python fallback"
+  cp resources/assets/bundle.css resources/assets/bundle.min.css
+  echo "npx unavailable, copied bundle.css to bundle.min.css"
 fi

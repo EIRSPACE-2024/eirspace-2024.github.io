@@ -8,6 +8,7 @@
     <meta name="description" content="EIRSPACE est l'association aérospatiale de l'ENSEIRB-MATMECA à Bordeaux. Projets fusée, drone et astronomie réalisés par des étudiants ingénieurs passionnés par l'espace.">
     <link rel="preload" href="static/fonts/vt323-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="static/fonts/orbitron-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="static/fonts/telemarines3d1.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="canonical" href="https://eirspace-2024.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="EIRSPACE">
@@ -67,6 +68,25 @@
             <span class="letter">C</span><span class="letter">E</span>
         </div>
     </div>
+    <script>
+        (function() {
+            var ls = document.getElementById("loading-screen");
+            if (!sessionStorage.getItem("eirspace-first-visit")) {
+                sessionStorage.setItem("eirspace-first-visit", "true");
+                ls.style.display = "flex";
+                window.eirspaceLoadingPlaying = true; // Tell loading.js to wait
+                setTimeout(function() {
+                    ls.classList.add("hidden");
+                    setTimeout(function() { 
+                        ls.style.display = "none"; 
+                        window.eirspaceLoadingPlaying = false;
+                        // Dispatch an event to init the rest of the page animations
+                        window.dispatchEvent(new Event('eirspace-loading-done'));
+                    }, 1000);
+                }, 3600);
+            }
+        })();
+    </script>
 
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar" aria-label="Navigation principale">
