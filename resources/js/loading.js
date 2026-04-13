@@ -197,7 +197,12 @@ function initPageTransitions() {
     const reducedMotion = prefersReducedMotionEnabled();
     const transitionDurationMs = 240;
 
-    document.body.classList.add('page-enter');
+    // Apply page-enter only if we're not running the loading screen
+    if (!window.eirspaceLoadingPlaying) {
+        // If the document is already fully loaded, the class addition might cause a flash.
+        // We only add it here if we're reasonably early in the cycle, or we just let CSS handle it.
+        document.body.classList.add('page-enter');
+    }
 
     if (reducedMotion) {
         return;
@@ -238,6 +243,13 @@ function initPageTransitions() {
             }, transitionDurationMs);
         });
     });
+
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('page-leave');
+            isNavigating = false;
+        }
+    });
 }
 
 let pageBootstrapDone = false;
@@ -246,12 +258,15 @@ function bootstrapPageAnimations() {
     if (pageBootstrapDone) {
         return;
     }
+    
     pageBootstrapDone = true;
 
     // Remove full-screen intro completely to avoid replay/visibility issues.
-    const loadingScreen = document.getElementById('loading-screen');
-    if (loadingScreen) {
-        loadingScreen.style.display = 'none';
+    if (!window.eirspaceLoadingPlaying) {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            loadingScreen.style.display = 'none';
+        }
     }
 
     initPageTransitions();
@@ -334,6 +349,7 @@ function generateStarField() {
     const starDensity = 1 / 10000;
     let pageWidth = window.innerWidth;
     let pageHeight = Math.max(document.body.scrollHeight, window.innerHeight);
+    let lastPageHeight = pageHeight;
 
     function refreshDimensions() {
         pageWidth = window.innerWidth;
@@ -352,14 +368,20 @@ function generateStarField() {
             Math.min(280, Math.floor(window.innerWidth * window.innerHeight * starDensity));
         const currentStars = document.querySelectorAll('.star').length;
 
-        if (currentStars === numStarsNeeded) {
+        if (currentStars === numStarsNeeded && Math.abs(lastPageHeight - pageHeight) < 50) {
             return;
         }
 
+        if (Math.abs(lastPageHeight - pageHeight) >= 50) {
+            starField.innerHTML = '';
+            lastPageHeight = pageHeight;
+        }
+
+        const actualCurrentStars = document.querySelectorAll('.star').length;
         const fragment = document.createDocumentFragment();
     
-        if (currentStars < numStarsNeeded) {
-            for (let i = currentStars; i < numStarsNeeded; i++) {
+        if (actualCurrentStars < numStarsNeeded) {
+            for (let i = actualCurrentStars; i < numStarsNeeded; i++) {
                 const star = document.createElement('div');
                 star.classList.add('star');
 
@@ -383,8 +405,8 @@ function generateStarField() {
             }
 
             starField.appendChild(fragment);
-        } else if (currentStars > numStarsNeeded) {
-            for (let i = 0; i < currentStars - numStarsNeeded; i++) {
+        } else if (actualCurrentStars > numStarsNeeded) {
+            for (let i = 0; i < actualCurrentStars - numStarsNeeded; i++) {
                 if (starField.lastChild) {
                     starField.removeChild(starField.lastChild);
                 }
@@ -404,7 +426,10 @@ function generateStarField() {
         });
     });
 
-    window.addEventListener('pageshow', adjustStars);
+    window.addEventListener('pageshow', (event) => {
+        adjustStars();
+    });
+    window.addEventListener('load', adjustStars); // Re-calculate stars when images finish loading
 
     /* --------------------------------------------------------------------- */
 }

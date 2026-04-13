@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+cat resources/assets/*.css | sed '/bundle\.min\.css/d' | sed '/bundle\.css/d' > resources/assets/bundle.css || true
 cat \
   resources/assets/styles.css \
   resources/assets/components.css \
