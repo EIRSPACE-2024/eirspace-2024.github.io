@@ -13,7 +13,7 @@ function createShootingStar() {
     star.classList.add('shooting-star');
 
     const startX = Math.random() * window.innerWidth;
-    const startY = Math.random() * (window.innerHeight / 2);
+    const startY = -Math.random() * (window.innerHeight / 3);
 
     star.style.left = `${startX}px`;
     star.style.top = `${startY}px`;
@@ -32,7 +32,7 @@ const prefersReducedMotion =
 const saveDataEnabled =
     navigator.connection && navigator.connection.saveData;
 
-const SHOOTING_STAR_PERIOD_MS = 6000;
+const SHOOTING_STAR_PERIOD_MS = 4200;
 const ANIMATION_SESSION_START_KEY = 'eirspace-animation-session-start';
 
 let shootingStarInterval = null;

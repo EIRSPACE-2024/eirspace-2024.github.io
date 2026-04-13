@@ -14,6 +14,7 @@
     display: flex;
     transition: transform var(--duration-navbar) ease;
     z-index: 200;
+    align-items: center;
 }
 
 .navbar.navbar-hidden {
@@ -25,10 +26,9 @@
 /* ------------------------------------------------------------------------- */
 
 .logo-navbar {
-    padding: 15px 0;
-    margin-right: 20vw;
-    margin-left: 12vw;
-    margin-top: 2.4vh;
+    padding: 12px 0;
+    margin-left: clamp(20px, 6vw, 120px);
+    margin-right: clamp(20px, 6vw, 120px);
 }
 
 .logo-navbar a {
@@ -42,7 +42,8 @@
     width: 100%;
     height: auto;
     min-height: 40px;
-    min-width: 12vw;
+    min-width: clamp(150px, 11vw, 220px);
+    max-width: 260px;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -56,6 +57,8 @@
     display: flex;
     margin: 0;
     padding: 0;
+    flex: 1;
+    justify-content: center;
 }
 
 .nav-links li {
@@ -88,12 +91,15 @@
 
 .nav-links a.is-active {
     color: var(--color-accent);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
 }
 
 .nav-links a.is-active::after {
     background: var(--color-accent);
     transform: translateX(-50%) scaleX(1);
-    transition: transform 0.28s ease, background-color 0.28s ease;
+    height: 2px;
+    transition: transform 0.28s ease, background-color 0.28s ease, height 0.28s ease;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -102,7 +108,8 @@
 
 .dropdown-menu {
     margin-left: auto;
-    margin-right: 5vw;
+    margin-right: clamp(16px, 4vw, 64px);
+    display: none;
 }
 
 .menu-toggle {
@@ -111,7 +118,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    margin-top: 1.5vh;
+    margin-top: 0;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -154,8 +161,9 @@
 
 .dropdown-links li a.is-active {
     color: var(--color-accent);
-    border-left: 2px solid var(--color-accent);
+    border-left: 3px solid var(--color-accent);
     padding-left: 0.7em;
+    font-weight: bold;
     transition: color 0.2s ease, border-color 0.2s ease, padding-left 0.2s ease;
 }
 
@@ -195,15 +203,16 @@
 
 @media (max-width: 2500px) {
     .navbar {
-        height: 13vh;
+        height: 11vh;
+        min-height: 86px;
     }
 
     .logo-navbar {
-        margin-right: -140px; /* The picture is too wide. */
+        margin-right: clamp(16px, 4vw, 90px);
     }
 
     .logo-navbar img {
-        width: 60%;
+        width: 100%;
     }
 
     .nav-links {
@@ -222,11 +231,12 @@
 
 @media (max-width: 1400px) {
     .navbar {
-        height: 13vh;
+        height: 11vh;
+        min-height: 86px;
     }
 
     .logo-navbar img {
-        width: 60%;
+        width: 100%;
     }
 
     .dropdown-links li a {
@@ -241,17 +251,17 @@
 
 @media (max-width: 1200px) {
     .navbar {
-        height: 18vh;
-        min-height: 110px;
+        height: 15vh;
+        min-height: 102px;
     }
 
     .logo-navbar img {
-        width: 70%;
+        width: 100%;
     }
     
     .menu-toggle {
-        font-size: 5em;
-        margin-top: 2vh;
+        font-size: 4.6em;
+        margin-top: 0;
     }
 
     .nav-links {
@@ -260,27 +270,12 @@
 
     .dropdown-menu {
         display: block;
-        margin-top: -14px;
-        align-items: auto;
+        margin-top: 0;
+        align-items: center;
     }
 
     .dropdown-links li a {
         padding: 0.5em 0;
-    }
-}
-
-@media (max-width: 500px) {
-    .logo-navbar img {
-        width: 55%;
-    }
-
-    .dropdown-links li a {
-        font-size: 1em;
-    }
-
-    .menu-toggle {
-        font-size: 3.5em;
-        margin-top: 3.2vh;
     }
 }
 
@@ -293,11 +288,11 @@
     .logo-navbar {
         margin-left: 8vw;
         margin-right: 0;
-        margin-top: 2.6vh;
+        padding: 10px 0;
     }
 
     .logo-navbar img {
-        width: 62%;
+        width: 100%;
         min-width: 170px;
     }
 
@@ -308,7 +303,7 @@
 
     .menu-toggle {
         font-size: 4.2em;
-        margin-top: 2.2vh;
+        margin-top: 0;
     }
 }
 
@@ -320,22 +315,38 @@
 
     .logo-navbar {
         margin-left: 5vw;
-        margin-top: 2.1vh;
+        padding: 8px 0;
     }
 
     .logo-navbar img {
-        width: 56%;
+        width: 100%;
         min-width: 150px;
     }
 
     .menu-toggle {
         font-size: 3.6em;
-        margin-top: 2.3vh;
+        margin-top: 0;
     }
 
     .dropdown-links {
         top: 82px;
         padding: 1.4em;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo-navbar img {
+        width: 100%;
+        min-width: 140px;
+    }
+
+    .dropdown-links li a {
+        font-size: 1em;
+    }
+
+    .menu-toggle {
+        font-size: 3.5em;
+        margin-top: 0;
     }
 }
 
@@ -347,11 +358,11 @@
 
     .logo-navbar {
         margin-left: 4vw;
-        margin-top: 2vh;
+        padding: 8px 0;
     }
 
     .logo-navbar img {
-        width: 52%;
+        width: 100%;
         min-width: 130px;
     }
 
@@ -361,7 +372,7 @@
 
     .menu-toggle {
         font-size: 3em;
-        margin-top: 2.2vh;
+        margin-top: 0;
     }
 
     .dropdown-links {

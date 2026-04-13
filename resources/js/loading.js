@@ -110,17 +110,21 @@ function prefersReducedMotionEnabled() {
     return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
+function shouldEnableStarField() {
+    return window.innerWidth >= 768;
+}
+
 function initImageReveal() {
     if (prefersReducedMotionEnabled()) {
         return;
     }
 
     const revealTargets = document.querySelectorAll(
-        '.section-member img, .team-member img, .team-member-juju img, .minipage-member img, .partner-logo'
+        '.section-member img, .team-member img, .minipage-member img, .partner-logo'
     );
 
     function getRevealBoxes(img) {
-        const selectors = ['.section-member', '.team-member', '.team-member-juju', '.minipage-member', '.partner-logo-wrap', '.partner-card'];
+        const selectors = ['.section-member', '.team-member', '.minipage-member', '.partner-logo-wrap', '.partner-card'];
         const boxes = [];
 
         selectors.forEach((selector) => {
@@ -236,48 +240,67 @@ function initPageTransitions() {
     });
 }
 
-window.addEventListener('load', () => {
-    const loadingScreen = document.getElementById('loading-screen');
-    const FIRST_VISIT_KEY = 'eirspace-first-visit-done';
+let pageBootstrapDone = false;
 
-    if (!loadingScreen) {
-        generateStarField();
+function bootstrapPageAnimations() {
+    if (pageBootstrapDone) {
+        return;
+    }
+    pageBootstrapDone = true;
+
+    // Remove full-screen intro completely to avoid replay/visibility issues.
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        loadingScreen.style.display = 'none';
+    }
+
+    initPageTransitions();
+    scheduleImageRevealInitialization();
+    scheduleStarFieldInitialization();
+}
+
+function scheduleImageRevealInitialization() {
+    const startImageReveal = () => {
+        if (document.hidden) {
+            return;
+        }
+
         initImageReveal();
-        initPageTransitions();
+    };
+
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(startImageReveal, { timeout: 900 });
         return;
     }
 
-    const isLandingOnIndex = isIndexPage();
-    const isFirstVisit = !getLocalFlag(FIRST_VISIT_KEY);
+    window.setTimeout(startImageReveal, 150);
+}
 
-    // Intro is allowed only once and only on index page.
-    if (isLandingOnIndex && isFirstVisit) {
-        // Mark immediately so fast navigation cannot replay the intro on next page.
-        setLocalFlag(FIRST_VISIT_KEY);
-
-        setTimeout(() => {
-            loadingScreen.style.opacity = '0';
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-                
-                // To wait for the loading to finish.
-                generateStarField();
-                initImageReveal();
-                initPageTransitions();
-            }, 500); 
-        }, 2500); // Max time duration.
-    } else {
-        if (isFirstVisit) {
-            // Consume first visit even when entering from another page.
-            setLocalFlag(FIRST_VISIT_KEY);
+function scheduleStarFieldInitialization() {
+    const startStarField = () => {
+        if (document.hidden || !shouldEnableStarField()) {
+            return;
         }
 
-        loadingScreen.style.display = 'none';
         generateStarField();
-        initImageReveal();
-        initPageTransitions();
+    };
+
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(startStarField, { timeout: 1200 });
+        return;
     }
-});
+
+    window.setTimeout(startStarField, 300);
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootstrapPageAnimations, { once: true });
+} else {
+    bootstrapPageAnimations();
+}
+
+// Fallback in case DOMContentLoaded listener is skipped in edge navigation cases.
+window.addEventListener('load', bootstrapPageAnimations, { once: true });
 
 /* ------------------------------------------------------------------------- */
 /*                      TO GENERATE A STAR FIELD                             */
@@ -286,6 +309,11 @@ window.addEventListener('load', () => {
 function generateStarField() {
     const starField = document.querySelector('.star-field');
     if (!starField) {
+        return;
+    }
+
+    if (!shouldEnableStarField()) {
+        starField.innerHTML = '';
         return;
     }
 
