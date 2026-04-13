@@ -25,6 +25,7 @@
     z-index: 1000;
     font-family: 'Tele Marines', sans-serif;
     transition: opacity 0.5s ease, visibility 1s ease;
+    display: none;
 }
 
 #loading-text {

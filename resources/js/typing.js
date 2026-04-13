@@ -5,25 +5,7 @@
 (function () {
     const DEFAULT_TYPING_SPEED = 40;
     const TYPING_SELECTOR = '[id^="typing-text_"]';
-    const TYPING_DONE_KEY = 'eirspace-typing-done';
     const typedElements = new WeakSet();
-    let hasStartedFirstTyping = false;
-
-    function getTypingDoneFlag() {
-        try {
-            return window.localStorage.getItem(TYPING_DONE_KEY) === 'true';
-        } catch (error) {
-            return false;
-        }
-    }
-
-    function setTypingDoneFlag() {
-        try {
-            window.localStorage.setItem(TYPING_DONE_KEY, 'true');
-        } catch (error) {
-            // Ignore storage errors.
-        }
-    }
 
     function normalizeText(rawText) {
         if (typeof rawText !== 'string') {
@@ -88,11 +70,6 @@
         }
 
         typedElements.add(element);
-
-        if (!hasStartedFirstTyping) {
-            hasStartedFirstTyping = true;
-            setTypingDoneFlag();
-        }
 
         const sourceText = normalizeText(element.getAttribute('data-text'));
         typeEffect(element, sourceText, speed);
@@ -162,10 +139,6 @@
 
         // Always render a readable fallback first so text is never empty.
         typingElements.forEach(renderStaticText);
-
-        if (getTypingDoneFlag()) {
-            return;
-        }
 
         setupTypingObserver(typingElements, DEFAULT_TYPING_SPEED);
     });

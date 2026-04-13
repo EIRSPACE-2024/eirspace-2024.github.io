@@ -40,6 +40,38 @@
     display: block;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .team-member img,
+    .team-member-juju img {
+        opacity: 0.12;
+        filter: brightness(0.7) saturate(0.8) blur(1px);
+        transform: scale(0.985);
+        transition: opacity var(--duration-medium) ease, filter var(--duration-medium) ease, transform var(--duration-medium) ease;
+    }
+
+    .team-member-juju {
+        opacity: 0;
+        transform: scale(0.985);
+        transition: opacity var(--duration-medium) ease, transform var(--duration-medium) ease, background-color var(--duration-medium) ease, border-color var(--duration-medium) ease;
+    }
+
+    .team-member-juju:hover,
+    .team-member-juju:focus-within {
+        opacity: 1;
+        transform: translateY(-5px) scale(1);
+        background-color: var(--color-surface-hover);
+    }
+
+    .team-member:hover img,
+    .team-member:focus-within img,
+    .team-member-juju:hover img,
+    .team-member-juju:focus-within img {
+        opacity: 1;
+        filter: none;
+        transform: scale(1);
+    }
+}
+
 .member-info {
     min-height: 156px;
     padding: 10px 10px 12px;
@@ -80,8 +112,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid var(--color-border);
-    opacity: 0;
-    transition: all 5s ease 0S;
+    transition: transform var(--duration-medium) ease, background-color var(--duration-medium) ease, opacity var(--duration-medium) ease;
 }
 
 .team-member-juju:hover {
