@@ -1,0 +1,225 @@
+/* ------------------------------------------------------------------------- */
+/*          MAIN CSS FILE - FONT, SIZE, BODY, PARTICULAR STYLE ETC..         */
+/* ------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'VT323';
+    src: url('../../static/fonts/vt323-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../../static/fonts/orbitron-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-accent: #00FF41;
+    --color-text: #ffffff;
+    --color-bg: #000000;
+    --color-surface-hover: #151515;
+    --color-border: rgba(255, 255, 255, 1);
+    --color-divider: #555555;
+
+    --font-body: 'VT323', 'Courier New', Courier, monospace;
+    --font-display: 'Orbitron', sans-serif;
+
+    --duration-fast: 0.3s;
+    --duration-medium: 0.5s;
+    --duration-slow: 0.8s;
+    --duration-navbar: 1s;
+
+    --radius-card: 10px;
+    --space-xxs: 0.2rem;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-gap-sm: 20px;
+    --space-gap-lg: 40px;
+    --space-stack-sm: 10px;
+    --space-stack-md: 30px;
+
+    --space-vh-sm: 10vh;
+    --space-vh-md: 20vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Custom retro scrollbar instead of hiding it */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+    border-left: 1px solid var(--color-divider);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    opacity: 0.5;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #00CC33;
+}
+/* Firefox custom scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-bg);
+}
+
+body {
+    color: var(--color-accent);
+    font-family: var(--font-body); /* retro */
+    /* font-family: 'Courier New', Courier, monospace; /* alien */
+    background-color: var(--color-bg); /* background-color: #0A1A2F; */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    isolation: isolate;
+}
+
+main {
+    flex: 1;
+    position: relative;
+}
+
+html {
+    background-color: var(--color-bg);
+}
+
+a {
+    text-decoration: none;
+    background: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: var(--space-stack-sm);
+    background: none;
+}
+
+li {
+    border: none;
+    background: none;
+    z-index: 1;
+}
+
+.image-container {
+    z-index: 1;
+    background: none;
+    max-width: 1000px;
+    max-height: 1000px;
+    width: 100%;
+}
+
+.section,
+.page-shell,
+.minipage-section,
+.team-section,
+.partners-section,
+.video-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 800px;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                  STARS                                    */
+/* ------------------------------------------------------------------------- */
+
+.star-field {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.star {
+    z-index: -1;
+    position: absolute;
+    border-radius: 50%;
+    background: var(--color-text);
+    opacity: 0;
+}
+
+.twinkling {
+    animation: twinkling 4s infinite alternate;
+}
+
+@keyframes twinkling {
+    0% { opacity: 0.1; }
+    100% { opacity: 1; }
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SHOOTING STAR                                */
+/* ------------------------------------------------------------------------- */
+
+.shooting-star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shooting-star {
+    z-index: -10;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--color-text);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    opacity: 1;
+    animation: shooting-star 1.7s linear forwards;
+}
+
+@keyframes shooting-star {
+    0% {
+        z-index: -1;
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        z-index: -1;
+        transform: translate3d(14vw, 112vh, 0) scale(1.4);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+

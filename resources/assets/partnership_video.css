@@ -1,0 +1,194 @@
+/* ------------------------------------------------------------------------- */
+/*                     PARTNERSHIP + VIDEO PAGES                             */
+/* ------------------------------------------------------------------------- */
+
+.page-shell {
+    width: min(1100px, 94vw);
+    margin: 0 auto;
+}
+
+.page-hero {
+    margin-top: clamp(14vh, 16vh, 19vh);
+    margin-bottom: 4vh;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: clamp(2rem, 1.6rem + 2vw, 3.8rem);
+    letter-spacing: 0.08em;
+}
+
+.page-hero p {
+    margin-top: 1rem;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 0.9rem + 0.6vw, 1.45rem);
+    line-height: 1.4;
+    opacity: 0.92;
+}
+
+.info-note {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 1rem 1.2rem;
+    margin: 0 auto 3.2vh;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.04);
+    font-family: var(--font-display);
+    font-size: clamp(0.94rem, 0.86rem + 0.35vw, 1.1rem);
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                PARTNERS                                   */
+/* ------------------------------------------------------------------------- */
+
+.partners-section {
+    margin-bottom: 12vh;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.partner-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+    overflow: hidden;
+    transition: transform var(--duration-medium) ease, box-shadow var(--duration-medium) ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.partner-card a {
+    display: block;
+    color: inherit;
+}
+
+.partner-logo-wrap {
+    background: #0d0f13;
+    padding: 1.1rem;
+}
+
+.partner-logo {
+    display: block;
+    width: 100%;
+    height: clamp(90px, 11vw, 130px);
+    object-fit: contain;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .partner-logo {
+        opacity: 0.2;
+        filter: brightness(0.8) saturate(0.8);
+        transform: scale(0.98);
+        transition: opacity var(--duration-medium) ease, filter var(--duration-medium) ease, transform var(--duration-medium) ease;
+    }
+
+    .partner-card:hover .partner-logo,
+    .partner-card:focus-within .partner-logo {
+        opacity: 1;
+        filter: none;
+        transform: scale(1);
+    }
+}
+
+.partner-copy {
+    padding: 0.95rem 1rem 1.1rem;
+    text-align: center;
+}
+
+.partner-copy h3 {
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+    letter-spacing: 0.07em;
+}
+
+.partner-copy p {
+    margin-top: 0.35rem;
+    font-family: var(--font-display);
+    color: var(--color-text);
+    opacity: 0.85;
+    font-size: clamp(0.9rem, 0.85rem + 0.3vw, 1rem);
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                  VIDEO                                    */
+/* ------------------------------------------------------------------------- */
+
+.video-section {
+    margin-bottom: 10vh;
+}
+
+.video-frame {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    background: #060708;
+    box-shadow: 0 15px 34px rgba(0, 0, 0, 0.4);
+}
+
+.main-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: min(70vh, 780px);
+    background: #000;
+}
+
+.video-caption {
+    padding: 0.95rem 1.1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: clamp(0.95rem, 0.86rem + 0.34vw, 1.08rem);
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                RESPONSIVE                                 */
+/* ------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        margin-top: 13vh;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .info-note {
+        margin-bottom: 2.2vh;
+    }
+}
+
+@media (max-width: 390px) {
+    .page-shell {
+        width: 95vw;
+    }
+
+    .page-hero {
+        margin-top: 12vh;
+    }
+
+    .partner-logo-wrap {
+        padding: 0.85rem;
+    }
+}
+
+/* ------------------------------------------------------------------------- */

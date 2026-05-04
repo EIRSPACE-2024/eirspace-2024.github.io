@@ -1,0 +1,247 @@
+/* ------------------------------------------------------------------------- */
+/*          Here is the css for the rocket, drone and astro section          */
+/* ------------------------------------------------------------------------- */
+
+.minipage-section {
+    margin-top: var(--space-vh-md);
+    padding: var(--space-lg);
+    background: none;
+}
+
+.minipage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: var(--space-gap-sm);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: min(100%, 1280px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.minipage-member {
+    z-index: 100;
+    transition: background-color var(--duration-slow) ease;
+}
+
+.minipage-member:hover {
+    background-color: var(--color-surface-hover);    /* background-color: #112240; */
+}
+
+.minipage-member img {
+    display: block;
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    width: min(100%, 440px);
+    border: 1px solid var(--color-border);
+}
+
+.minipage-member video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+}
+
+.minipage-info h3 {
+    font-size: clamp(1.1rem, 0.9rem + 1vw, 2rem);
+    text-align: center;
+}
+
+.minipage-content {
+    text-align: center;
+    background: none;
+    padding: var(--space-xxs) var(--space-xxs);
+    font-size: clamp(0.98rem, 0.84rem + 0.7vw, 1.5rem);
+    letter-spacing: clamp(1px, 0.2vw + 0.5px, 4px);
+}
+
+/* ------------------------------------------------------------------------- */
+/*                          For the first section.                           */
+/* ------------------------------------------------------------------------- */
+
+.minipage-section-zero {
+    margin-top: var(--space-vh-md);
+    padding: var(--space-lg);
+    background: none;
+}
+
+.minipage-grid-zero {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: var(--space-gap-sm);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: min(100%, 1280px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.minipage-content-zero {
+    text-align: center;
+    background: none;
+    font-size: clamp(1rem, 0.85rem + 0.8vw, 1.5rem);
+    letter-spacing: 0.1em;
+}
+
+.minipage-grid-first {
+    display: flex;
+    max-width: 42vw;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-drone .minipage-section-spaced {
+    margin-bottom: 10vh;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SMALL SCREENS                                */
+/* ------------------------------------------------------------------------- */
+
+@media (max-width: 1400px) {
+    .minipage-section {
+        margin-top: var(--space-vh-sm);
+    }
+
+    .minipage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .minipage-grid-first {
+        margin-top: var(--space-vh-sm);
+    }
+
+    .minipage-member img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .minipage-grid-zero {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 1250px) {
+    .minipage-content-zero {
+        font-size: 1em;
+        letter-spacing: 0em;
+    }
+
+    .minipage-grid-first {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 500px) {
+    .minipage-content-zero {
+        font-size: 0.8em;
+        letter-spacing: 0em;
+    }
+
+    .minipage-member img {
+        width: min(100%, 320px);
+        min-width: 0;
+    }
+
+    .minipage-content h1 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-rocket .minipage-section-zero,
+    .page-drone .minipage-section-zero {
+        margin-top: 14vh;
+        padding: 1.6rem;
+    }
+
+    .page-rocket .minipage-section,
+    .page-drone .minipage-section {
+        margin-top: 10vh;
+        padding: 1.6rem;
+    }
+
+    .page-rocket .minipage-grid,
+    .page-drone .minipage-grid,
+    .page-rocket .minipage-grid-zero,
+    .page-drone .minipage-grid-zero {
+        gap: 22px;
+    }
+
+    .page-drone .minipage-section-spaced {
+        margin-bottom: 8vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-rocket .minipage-section-zero,
+    .page-drone .minipage-section-zero {
+        margin-top: 12vh;
+        padding: 1.2rem;
+    }
+
+    .page-rocket .minipage-section,
+    .page-drone .minipage-section {
+        margin-top: 8vh;
+        padding: 1.2rem;
+    }
+
+    .page-rocket .minipage-grid,
+    .page-drone .minipage-grid,
+    .page-rocket .minipage-grid-zero,
+    .page-drone .minipage-grid-zero {
+        gap: 16px;
+    }
+
+    .page-rocket .minipage-content,
+    .page-drone .minipage-content {
+        font-size: 1.08rem;
+        letter-spacing: 0.06em;
+    }
+
+    .page-drone .minipage-section-spaced {
+        margin-bottom: 6vh;
+    }
+}
+
+@media (max-width: 390px) {
+    .page-rocket .minipage-section-zero,
+    .page-drone .minipage-section-zero {
+        margin-top: 11vh;
+        padding: 0.9rem;
+    }
+
+    .page-rocket .minipage-section,
+    .page-drone .minipage-section {
+        margin-top: 7vh;
+        padding: 0.9rem;
+    }
+
+    .page-rocket .minipage-grid,
+    .page-drone .minipage-grid,
+    .page-rocket .minipage-grid-zero,
+    .page-drone .minipage-grid-zero {
+        gap: 12px;
+    }
+
+    .page-rocket .minipage-content,
+    .page-drone .minipage-content {
+        font-size: 0.98rem;
+        letter-spacing: 0.04em;
+    }
+
+    .page-drone .minipage-section-spaced {
+        margin-bottom: 5vh;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+

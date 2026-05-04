@@ -1,0 +1,297 @@
+/* ------------------------------------------------------------------------- */
+/*                              FOR THE TEAM PAGE                            */
+/* ------------------------------------------------------------------------- */
+
+.team-section {
+    margin-top: var(--space-vh-sm);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-gap-sm);
+    justify-items: center;
+    width: min(100%, 1280px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+    transition: transform var(--duration-medium) ease, background-color var(--duration-medium) ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-surface-hover);    /* background-color: #112240; */
+}
+
+.team-member img {
+    z-index: 2;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .team-member img,
+    .team-member-juju img {
+        opacity: 0.12;
+        filter: brightness(0.7) saturate(0.8) blur(1px);
+        transform: scale(0.985);
+        transition: opacity var(--duration-medium) ease, filter var(--duration-medium) ease, transform var(--duration-medium) ease;
+    }
+
+    .team-member-juju {
+        opacity: 0;
+        transform: scale(0.985);
+        transition: opacity var(--duration-medium) ease, transform var(--duration-medium) ease, background-color var(--duration-medium) ease, border-color var(--duration-medium) ease;
+    }
+
+    .team-member-juju:hover,
+    .team-member-juju:focus-within {
+        opacity: 1;
+        transform: translateY(-5px) scale(1);
+        background-color: var(--color-surface-hover);
+    }
+
+    .team-member:hover img,
+    .team-member:focus-within img,
+    .team-member-juju:hover img,
+    .team-member-juju:focus-within img {
+        opacity: 1;
+        filter: none;
+        transform: scale(1);
+    }
+}
+
+.member-info {
+    min-height: 156px;
+    padding: 10px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.member-info h3 {
+    font-size: clamp(1.1rem, 0.92rem + 1.1vw, 1.75rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.member-info h2 {
+    font-size: clamp(0.92rem, 0.8rem + 0.65vw, 1.22rem);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.member-info p {
+    font-size: clamp(0.88rem, 0.8rem + 0.38vw, 1rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SPECIAL FOR JUJU                             */
+/* ------------------------------------------------------------------------- */
+
+.team-member-juju {
+    background: none;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+    transition: transform var(--duration-medium) ease, background-color var(--duration-medium) ease, opacity var(--duration-medium) ease;
+}
+
+.team-member-juju:hover {
+    opacity: 1;
+}
+
+.team-member-juju img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.member-info-juju {
+    background: none;
+    min-height: 156px;
+    padding: 10px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.member-info-juju h3 {
+    font-size: clamp(1.1rem, 0.92rem + 1.1vw, 1.75rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.member-info-juju h2 {
+    font-size: clamp(0.92rem, 0.8rem + 0.65vw, 1.22rem);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.member-info-juju p {
+    font-size: clamp(0.88rem, 0.8rem + 0.38vw, 1rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                          FOR THE FORMER TEAMS                             */
+/* ------------------------------------------------------------------------- */
+
+.section-badge-team {
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    background: none;
+    text-transform: uppercase;
+    font-size: clamp(1.3rem, 1rem + 1.8vw, 3rem);
+}
+
+.section-badge-team a {
+    color: inherit;
+    text-decoration: none;
+    background: none;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                              SMALL SCREENS                                */
+/* ------------------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .section-badge-team {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 500px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member {
+        margin-bottom: var(--space-stack-sm);
+    }
+
+    .team-member img {
+        max-width: min(100%, 400px);
+    }
+
+    .team-member-juju img {
+        max-width: min(100%, 400px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-team .team-section {
+        margin-top: 8vh;
+        padding: 1.6rem;
+    }
+
+    .page-team .team-grid {
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .page-team .section-badge-team {
+        margin-top: 6vh;
+        margin-bottom: 6vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-team .team-section {
+        margin-top: 7vh;
+        padding: 1.2rem;
+    }
+
+    .page-team .team-grid {
+        grid-template-columns: 1fr;
+        width: min(100%, 560px);
+        gap: 16px;
+    }
+
+    .page-team .team-member,
+    .page-team .team-member-juju {
+        width: 100%;
+        max-width: 560px;
+    }
+
+    .page-team .section-badge-team {
+        font-size: 1.8em;
+    }
+
+    .page-team .member-info,
+    .page-team .member-info-juju {
+        min-height: 144px;
+        padding: 9px 9px 11px;
+    }
+}
+
+@media (max-width: 390px) {
+    .page-team .team-section {
+        margin-top: 6vh;
+        padding: 0.9rem;
+    }
+
+    .page-team .team-grid {
+        gap: 12px;
+    }
+
+    .page-team .member-info h3,
+    .page-team .member-info-juju h3 {
+        font-size: 1.35rem;
+    }
+
+    .page-team .member-info h2,
+    .page-team .member-info-juju h2 {
+        font-size: 1.05rem;
+    }
+
+    .page-team .member-info p,
+    .page-team .member-info-juju p {
+        font-size: 0.95rem;
+    }
+
+    .page-team .section-badge-team {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        font-size: 1.5em;
+    }
+
+    .page-team .member-info,
+    .page-team .member-info-juju {
+        min-height: 126px;
+        padding: 8px 8px 10px;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+
