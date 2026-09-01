@@ -1,5 +1,5 @@
 /* =================================================================
-   EIRSPACE — Modern Interactions v2
+   EIRSPACE - Modern Interactions v2
    - Smooth scroll (Lenis-like): interpolated scroll for buttery feel
    - Intersection-based scroll reveals
    - Lightbox for astro gallery
@@ -14,7 +14,7 @@
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     /* =============================================================
-       SMOOTH SCROLL (Lenis-style) — interpolated wheel-driven scroll
+       SMOOTH SCROLL (Lenis-style) : interpolated wheel-driven scroll
        Lightweight implementation: catches wheel events, interpolates
        toward target scroll position with easing.
        ============================================================= */
@@ -136,7 +136,7 @@
     }
 
     /* =============================================================
-       FORCE VISIBLE — defensive cleanup
+       FORCE VISIBLE : defensive cleanup
        Some bundle.css rules add image-reveal-pending / box-reveal-pending
        which hide images via transform: scale(0.04). Strip these on cards
        that should be visible immediately.
@@ -261,7 +261,7 @@
        ============================================================= */
     function neutralizePageLeave() {
         // The bundle's loading.js adds .page-leave on link clicks for a fade.
-        // We don't want that — too slow for a multi-page site. Strip it.
+        // We don't want that, too slow for a multi-page site. Strip it.
         var observer = new MutationObserver(function () {
             if (document.body.classList.contains('page-leave')) {
                 document.body.classList.remove('page-leave');

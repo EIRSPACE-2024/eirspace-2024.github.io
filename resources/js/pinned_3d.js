@@ -1,5 +1,5 @@
 /* =================================================================
-   EIRSPACE — Pinned Scroll-Driven 3D
+   EIRSPACE - Pinned Scroll-Driven 3D
    Samsung-product-style: 3D model is sticky in the viewport.
    As the user scrolls, the model interpolates between camera/model
    keyframes anchored to .pinned-section elements.
@@ -14,7 +14,7 @@
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     /* =============================================================
-       MATERIALS — shared metallic / industrial look
+       MATERIALS : shared metallic / industrial look
        ============================================================= */
     function makeMaterials() {
         return {
@@ -58,7 +58,7 @@
     function buildRocket(M) {
         var rocket = new THREE.Group();
 
-        // ----- BODY (main stage) — tall white cylinder with paneling
+        // ----- BODY (main stage) : tall white cylinder with paneling
         var bodyHeight = 5.0;
         var bodyRadius = 0.45;
         var body = new THREE.Mesh(
@@ -90,7 +90,7 @@
             rocket.add(line);
         }
 
-        // EIRSPACE logo painted on rocket body — un seul logo, face avant
+        // EIRSPACE logo painted on rocket body : un seul logo, face avant
         // Cylindre partiel qui couvre un arc large pour un logo bien visible
         var rocketLogoLoader = new THREE.TextureLoader();
         var rocketLogoMat = new THREE.MeshBasicMaterial({
@@ -183,7 +183,7 @@
         porthole.position.set(0, bodyHeight / 2 + 0.25 + upperHeight - 0.3, upperRadius);
         rocket.add(porthole);
 
-        // ----- GRID FINS (4, near the top of the main body) — Falcon 9 style
+        // ----- GRID FINS (4, near the top of the main body) : Falcon 9 style
         var gridFinGroup = new THREE.Group();
         var gridFinShape = new THREE.Shape();
         gridFinShape.moveTo(0, 0);
@@ -202,7 +202,7 @@
         }
         rocket.add(gridFinGroup);
 
-        // ----- LANDING LEGS (4, near the bottom) — folded position
+        // ----- LANDING LEGS (4, near the bottom) : folded position
         var legGroup = new THREE.Group();
         for (var li = 0; li < 4; li++) {
             var leg = new THREE.Mesh(
@@ -216,7 +216,7 @@
         }
         rocket.add(legGroup);
 
-        // ----- MAIN ENGINE (visible at the bottom — Merlin/Raptor style)
+        // ----- MAIN ENGINE (visible at the bottom, Merlin/Raptor style)
         var bell = new THREE.Mesh(
             new THREE.CylinderGeometry(0.32, 0.42, 0.5, 32),
             M.chrome
@@ -325,7 +325,7 @@
             }
         );
 
-        // Top sticker — calotte ellipsoïdale custom qui épouse exactement la
+        // Top sticker : calotte ellipsoïdale custom qui épouse exactement la
         // courbure du dôme aplati du fuselage (rayon 0.7×0.45×0.98), avec des
         // UVs planaires (projection top-down) pour que le logo apparaisse
         // normalement vu de dessus, sans étirement.
@@ -380,7 +380,7 @@
         var topSticker = new THREE.Mesh(stickerGeo, droneLogoMat);
         drone.add(topSticker);
 
-        // (Dôme GPS retiré — préférence utilisateur)
+        // (Dôme GPS retiré, préférence utilisateur)
 
         // ----- GIMBAL CAMERA (front)
         var gimbalRing = new THREE.Mesh(
@@ -504,7 +504,7 @@
     }
 
     /* =============================================================
-       ASTRO — planète EIRSPACE + champ d'étoiles
+       ASTRO : planète EIRSPACE + champ d'étoiles
        ============================================================= */
     function buildAstroScene(scene) {
         // Champ d'étoiles
@@ -540,7 +540,7 @@
         });
         var points = new THREE.Points(geom, starMat);
 
-        // Soleil — lumière directionnelle forte depuis le côté droit
+        // Soleil : lumière directionnelle forte depuis le côté droit
         var sunLight = new THREE.DirectionalLight(0xfff0cc, 3.2);
         sunLight.position.set(7, 3, 5);
         scene.add(sunLight);
@@ -550,7 +550,7 @@
         bounceLight.position.set(-5, -2, -3);
         scene.add(bounceLight);
 
-        // Planète EIRSPACE — sphère avec logo texturé
+        // Planète EIRSPACE : sphère avec logo texturé
         // Pas d'émissif sur la base : le côté nuit reste sombre, côté jour est illuminé
         var planetMat = new THREE.MeshStandardMaterial({
             color: 0x243050,
@@ -611,7 +611,7 @@
     }
 
     /* =============================================================
-       PINNED EXPERIENCE — generic wrapper
+       PINNED EXPERIENCE : generic wrapper
        Reads keyframes from .pinned-section[data-keyframe="..."] elements
        and interpolates the model state along the page scroll.
        ============================================================= */

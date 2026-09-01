@@ -1,5 +1,5 @@
 /* =================================================================
-   EIRSPACE — MODERN OVERRIDES & NEW COMPONENTS  (v2)
+   EIRSPACE - MODERN OVERRIDES & NEW COMPONENTS  (v2)
    - Fix: photos visibles immédiatement (override bundle.css)
    - Fluidité: smooth scroll, transitions plus rapides
    - Nouveau: layout pinned scroll-driven (style Samsung)
@@ -21,7 +21,7 @@
 }
 
 /* =================================================================
-   FIX 1 — Photos visibles immédiatement
+   FIX 1 : Photos visibles immédiatement
    Le bundle.css cache toutes les images derrière un effet de reveal
    piloté par JS (transform: scale(0.04, 0.03), opacity: 0.55).
    On override ces règles globalement.
@@ -60,7 +60,7 @@ img.partner-logo {
 }
 
 /* =================================================================
-   FIX 2 — Fluidité du scroll
+   FIX 2 : Fluidité du scroll
    On désactive le smooth-scroll natif (lent), le smooth scroll
    sera géré par JS (Lenis-style). On annule aussi page-leave 240ms.
    ================================================================= */
@@ -405,7 +405,7 @@ body.page-leave {
 }
 
 /* =================================================================
-   SCROLL REVEAL — faster
+   SCROLL REVEAL (faster)
    ================================================================= */
 .reveal {
     opacity: 0;
@@ -647,7 +647,7 @@ body.page-leave {
 .lightbox-close:hover { background: rgba(0, 255, 65, 0.15); }
 
 /* =================================================================
-   TEAM CARDS — visible IMMÉDIATEMENT
+   TEAM CARDS : visible IMMÉDIATEMENT
    ================================================================= */
 .team-modern-grid {
     display: grid;
@@ -741,7 +741,7 @@ body.page-leave {
 .team-year-banner p { font-family: var(--font-body); color: rgba(255, 255, 255, 0.6); font-size: 1.1rem; }
 
 /* =================================================================
-   PARTNERSHIP — visible immédiatement
+   PARTNERSHIP : visible immédiatement
    ================================================================= */
 .partnership-cta-card {
     max-width: 1100px;
@@ -987,7 +987,7 @@ body.page-leave {
 .back-to-top:hover { background: var(--color-accent); color: #000; transform: translateY(-4px); }
 
 /* =================================================================
-   HOMEPAGE CARDS — visible
+   HOMEPAGE CARDS : visible
    ================================================================= */
 .section-cards .section-member,
 .section-grid-first .section-member {
@@ -1007,7 +1007,7 @@ body.page-leave {
 }
 
 /* =================================================================
-   FORMER TEAMS — fix opacity overrides
+   FORMER TEAMS : fix opacity overrides
    ================================================================= */
 .team-section .team-member,
 .team-section .team-member-juju {
@@ -1032,7 +1032,7 @@ body.page-leave {
 }
 
 /* =================================================================
-   TEAM — SOCIAL OVERLAY (2026-2027)
+   TEAM : SOCIAL OVERLAY (2026-2027)
    Sur desktop: survol de la carte → overlay social
    Sur mobile:  tap sur la zone photo → toggle overlay
    ================================================================= */
@@ -1117,7 +1117,7 @@ body.page-leave {
 }
 
 /* =================================================================
-   CONTACT — formulaire + info
+   CONTACT : formulaire + info
    ================================================================= */
 .contact-grid {
     display: grid;

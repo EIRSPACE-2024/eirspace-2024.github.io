@@ -195,7 +195,7 @@ function initImageReveal() {
 
 function initPageTransitions() {
     const reducedMotion = prefersReducedMotionEnabled();
-    const transitionDurationMs = 0; // was 240ms — instant nav for fluidity
+    const transitionDurationMs = 0; // was 240ms, instant nav for fluidity
 
     // Apply page-enter only if we're not running the loading screen
     if (!window.eirspaceLoadingPlaying) {
@@ -208,7 +208,7 @@ function initPageTransitions() {
         return;
     }
 
-    // Page-leave delay disabled for fluidity — links now navigate immediately
+    // Page-leave delay disabled for fluidity, links now navigate immediately
     // (we leave the listener structure intact in case we want a fade later)
     return;
 }

@@ -1,4 +1,4 @@
-# EIRSPACE — Modernisation v2
+# EIRSPACE : Modernisation v2
 
 ## 🔧 Ce qui a été corrigé depuis v1
 
@@ -47,11 +47,11 @@ Sur les pages **rocket / drone / astronomy**, la 3D est maintenant **`position: 
 - Un **indicateur de progression** (dots verticaux) à droite de l'écran montre l'avancement
 - Mobile : layout fallback (3D au-dessus, contenu en dessous, pas de sticky)
 
-**Sur rocket.html** : 4 keyframes — vue d'ensemble, zoom coiffe, zoom moteur, vue C'Space tournante.
+**Sur rocket.html** : 4 keyframes : vue d'ensemble, zoom coiffe, zoom moteur, vue C'Space tournante.
 
-**Sur drone.html** : 4 keyframes — overview, zoom caméra/gimbal, vue de dessus (architecture X), tilted final.
+**Sur drone.html** : 4 keyframes : overview, zoom caméra/gimbal, vue de dessus (architecture X), tilted final.
 
-**Sur astronomy.html** : 3 keyframes — sphère étoilée vue large, rotation, plongée vue de bas.
+**Sur astronomy.html** : 3 keyframes : sphère étoilée vue large, rotation, plongée vue de bas.
 
 ## 📁 Fichiers modifiés / ajoutés
 
